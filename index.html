@@ -834,6 +834,27 @@ th,td{padding:12px}
   }
 }
 
+
+/* ===== PROGRESO DE CARGAS V11 ===== */
+.strength-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}
+.strength-kpi{background:var(--soft,#f6f8f7);border:1px solid var(--line);border-radius:14px;padding:14px}
+.strength-kpi small{display:block;color:var(--muted);font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+.strength-kpi b{display:block;margin-top:6px;font-size:1.35rem;color:var(--ink)}
+.strength-kpi .positive{color:var(--green)}
+.strength-controls{display:grid;grid-template-columns:1.4fr .8fr;gap:10px;align-items:end}
+.strength-chart-wrap{margin-top:12px;border:1px solid var(--line);border-radius:14px;padding:10px;background:#fff;overflow:hidden}
+.strength-table-wrap{overflow:auto;margin-top:12px}
+.strength-table-wrap table{min-width:560px}
+.load-hint{margin-top:8px;padding:9px 11px;border-radius:10px;background:var(--green2);color:var(--dark);font-size:.82rem;line-height:1.35}
+.load-hint strong{color:var(--green)}
+.pr-badge{display:inline-flex;align-items:center;gap:5px;background:#fff3d9;color:#7b5a14;border:1px solid #efd89d;border-radius:999px;padding:4px 8px;font-size:.72rem;font-weight:850}
+@media(max-width:900px){
+ .strength-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .strength-controls{grid-template-columns:1fr}
+ .strength-kpi{padding:12px}
+ .strength-kpi b{font-size:1.18rem}
+}
+
 </style>
 </head>
 <body>
@@ -868,6 +889,31 @@ th,td{padding:12px}
 <section id="progress" class="page"><h1>Progreso corporal</h1><div class="card"><form id="pf"><div class="formgrid"><div><label>Fecha</label><input id="pd" type="date" required></div><div><label>Peso</label><input id="pw" type="number" step=".1" required></div><div><label>Cintura</label><input id="pwa" type="number" step=".1"></div><div><label>Pecho</label><input id="pch" type="number" step=".1"></div><div><label>Brazo</label><input id="parm" type="number" step=".1"></div><div><label>Pierna</label><input id="pleg" type="number" step=".1"></div><div><label>Entrenamientos</label><input id="pwo" type="number" min="0" max="7"></div><div><label>Pasos promedio</label><input id="psteps" type="number"></div><div><label>Cumplimiento %</label><input id="pcomp" type="number" min="0" max="100"></div></div><div style="margin-top:12px"><label>Notas</label><textarea id="pnotes"></textarea></div><div class="actions" style="margin-top:12px"><button class="btn">Guardar semana</button></div></form></div><div class="grid g2" style="margin-top:14px"><div class="card"><h3>Peso</h3><canvas id="wc" width="800" height="260"></canvas></div><div class="card"><h3>Cintura</h3><canvas id="wac" width="800" height="260"></canvas></div></div><div class="card" style="margin-top:14px"><div style="overflow:auto"><table><thead><tr><th>Fecha</th><th>Peso</th><th>Cintura</th><th>Gym</th><th>%</th><th></th></tr></thead><tbody id="rows"></tbody></table></div></div></section>
 
 <section id="history" class="page"><h1>Historial de entrenamientos</h1><p class="muted">Así vas con tu constancia: qué días entrenaste y cuáles quedaron libres.</p>
+<div class="card" style="margin-top:14px">
+  <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap">
+    <div>
+      <span class="badge">PROGRESIÓN</span>
+      <h2 style="margin:8px 0 4px">Progreso de cargas</h2>
+      <p class="muted" style="margin:0">Elegí un ejercicio para ver cuánto aumentaste desde tu primer registro, tu récord y la evolución sesión por sesión.</p>
+    </div>
+    <span class="pr-badge">🏆 Récord personal automático</span>
+  </div>
+  <div class="strength-controls" style="margin-top:14px">
+    <div><label>Ejercicio</label><select id="strengthExercise"></select></div>
+    <div><label>Vista</label><select id="strengthRange"><option value="all">Todo el historial</option><option value="10">Últimas 10 sesiones</option><option value="5">Últimas 5 sesiones</option></select></div>
+  </div>
+  <div class="strength-kpis">
+    <div class="strength-kpi"><small>Primer registro</small><b id="strengthFirst">—</b></div>
+    <div class="strength-kpi"><small>Último registro</small><b id="strengthLast">—</b></div>
+    <div class="strength-kpi"><small>Aumento total</small><b id="strengthGain">—</b></div>
+    <div class="strength-kpi"><small>Mejor marca</small><b id="strengthPR">—</b></div>
+  </div>
+  <div class="strength-chart-wrap"><canvas id="strengthChart" width="900" height="300"></canvas></div>
+  <div class="strength-table-wrap">
+    <table><thead><tr><th>Fecha</th><th>Día</th><th>Peso</th><th>Cambio</th><th>Estado</th></tr></thead><tbody id="strengthRows"></tbody></table>
+  </div>
+</div>
+
 <div class="grid g4" id="historyStats"></div>
 <div class="grid g2" style="margin-top:14px;align-items:start">
 <div class="card"><div class="actions" style="justify-content:space-between"><button class="btn ghost" onclick="month(-1)">←</button><h3 id="monthTitle"></h3><button class="btn ghost" onclick="month(1)">→</button></div><div class="calendar" id="cal"></div><div class="actions" style="margin-top:12px;gap:14px"><span class="legend"><span class="dot-legend done"></span> Entrenado</span><span class="legend"><span class="dot-legend miss"></span> Sin registro</span></div></div>
@@ -890,7 +936,7 @@ const nutritionPlan=[{"day":"Día 1","meals":[{"label":"🌅 Desayuno","name":"H
 const list={Proteínas:['Pechuga de pollo · 2–3 kg','Carne magra · 1–1,5 kg','Carne molida magra · 500–800 g','Huevos · 24–30 unidades','Yogur natural · 7 unidades','Queso magro · 300–400 g'],Carbohidratos:['Papa · 4–5 kg','Avena · 500 g','Batata · 1 kg','Mandioca · 1 kg','Pan integral · 1 paquete'],Verduras:['Lechuga · 2 unidades','Tomate · 1,5 kg','Cebolla · 1 kg','Zanahoria · 1 kg','Morrón · 4 unidades','Repollo · 1 unidad','Espinaca · 2 atados'],Frutas:['Banana · 10–14 unidades','Manzana · 7 unidades','Naranja o mandarina · 7 unidades'],Otros:['Maní sin sal · 300 g','Aceite · usar 1 cucharadita por comida','Limón · 6 unidades','Ajo · 2 cabezas','Orégano','Pimentón','Canela','Creatina · 5 g diarios']};
 let db=JSON.parse(localStorage.getItem('mtDB')||'{"progress":[],"workouts":{},"shopping":{},"photos":[]}'),gymDay=0,mealIdx=0,tsec=60,tint=null,calDate=new Date();
 const save=()=>localStorage.setItem('mtDB',JSON.stringify(db));
-function showPage(id){const target=document.getElementById(id);if(!target){console.error('Página no encontrada:',id);return;}document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));target.classList.add('active');document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('active',x.dataset.p===id));const selector=document.getElementById('pageSelect');if(selector)selector.value=id;if(id==='progress')renderProgress();if(id==='history'){renderCal();renderHistory();}if(id==='photos')renderPhotos();window.scrollTo({top:0,behavior:'smooth'});}document.querySelectorAll('.nav[data-p]').forEach(btn=>btn.addEventListener('click',function(e){e.preventDefault();showPage(this.dataset.p);}));const pageSelector=document.getElementById('pageSelect');if(pageSelector)pageSelector.addEventListener('change',e=>showPage(e.target.value));
+function showPage(id){const target=document.getElementById(id);if(!target){console.error('Página no encontrada:',id);return;}document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));target.classList.add('active');document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('active',x.dataset.p===id));const selector=document.getElementById('pageSelect');if(selector)selector.value=id;if(id==='progress')renderProgress();if(id==='history'){renderCal();renderHistory();renderStrengthProgress();}if(id==='photos')renderPhotos();window.scrollTo({top:0,behavior:'smooth'});}document.querySelectorAll('.nav[data-p]').forEach(btn=>btn.addEventListener('click',function(e){e.preventDefault();showPage(this.dataset.p);}));const pageSelector=document.getElementById('pageSelect');if(pageSelector)pageSelector.addEventListener('change',e=>showPage(e.target.value));
 window.page=showPage;
 const checks=[...document.querySelectorAll('#daily input')];
 let dkey='';
@@ -938,9 +984,82 @@ function scheduleDailyReset(){
 
 loadDailyState();
 scheduleDailyReset();
+
+function parseKg(v){
+  if(v===null||v===undefined||v==='') return null;
+  if(typeof v==='number') return Number.isFinite(v)?v:null;
+  let m=String(v).replace(',','.').match(/-?\d+(?:\.\d+)?/);
+  return m?parseFloat(m[0]):null;
+}
+function formatKg(v){return v===null||!Number.isFinite(v)?'—':(Math.round(v*10)/10).toLocaleString('es-PY')+' kg'}
+function exerciseHistory(dayIdx,exIdx){
+  return Object.entries(db.workouts).map(([k,v])=>{
+    let parts=k.split('-'),g=+parts.pop(),date=parts.join('-');
+    if(g!==dayIdx||!v||!v.weights) return null;
+    let weight=parseKg(v.weights[exIdx]);
+    if(weight===null) return null;
+    return {date,weight,done:!!v.done};
+  }).filter(Boolean).sort((a,b)=>a.date.localeCompare(b.date));
+}
+function previousExerciseWeight(dayIdx,exIdx){
+  let h=exerciseHistory(dayIdx,exIdx),today=new Date().toISOString().slice(0,10);
+  h=h.filter(x=>x.date<today);
+  return h.length?h[h.length-1].weight:null;
+}
+function allExerciseOptions(){
+  let arr=[];
+  workouts.forEach((w,di)=>w.ex.forEach((e,ei)=>arr.push({key:di+'|'+ei,dayIdx:di,exIdx:ei,name:e[0],day:w.day,title:w.title})));
+  return arr;
+}
+function initStrengthProgress(){
+  const sel=document.getElementById('strengthExercise'),range=document.getElementById('strengthRange');
+  if(!sel)return;
+  const opts=allExerciseOptions();
+  sel.innerHTML=opts.map(o=>`<option value="${o.key}">${o.name} · ${o.day}</option>`).join('');
+  sel.onchange=renderStrengthProgress;
+  range.onchange=renderStrengthProgress;
+  renderStrengthProgress();
+}
+function renderStrengthProgress(){
+  const sel=document.getElementById('strengthExercise');
+  if(!sel)return;
+  const [di,ei]=sel.value.split('|').map(Number),ex=workouts[di]?.ex[ei];
+  let h=exerciseHistory(di,ei);
+  const limit=document.getElementById('strengthRange').value;
+  if(limit!=='all')h=h.slice(-Number(limit));
+  const first=document.getElementById('strengthFirst'),last=document.getElementById('strengthLast'),gain=document.getElementById('strengthGain'),pr=document.getElementById('strengthPR'),rows=document.getElementById('strengthRows');
+  if(!h.length){
+    first.textContent=last.textContent=gain.textContent=pr.textContent='—';
+    rows.innerHTML='<tr><td colspan="5" class="muted">Todavía no hay cargas registradas para este ejercicio. Registrá el peso usado en “Mi rutina”.</td></tr>';
+    drawStrengthChart([]);
+    return;
+  }
+  const f=h[0].weight,l=h[h.length-1].weight,max=Math.max(...h.map(x=>x.weight)),delta=l-f,pct=f?delta/f*100:0;
+  first.textContent=formatKg(f);last.textContent=formatKg(l);pr.textContent=formatKg(max);
+  gain.textContent=(delta>0?'+':'')+(Math.round(delta*10)/10).toLocaleString('es-PY')+' kg'+(f?` (${pct>0?'+':''}${pct.toFixed(1)}%)`:'');
+  gain.classList.toggle('positive',delta>0);
+  rows.innerHTML=h.slice().reverse().map((x,idx,rev)=>{
+    const originalIndex=h.length-1-idx,prev=originalIndex>0?h[originalIndex-1].weight:null,d=prev===null?null:x.weight-prev,isPR=x.weight===max;
+    return `<tr><td>${new Date(x.date+'T00:00:00').toLocaleDateString('es-PY')}</td><td>${workouts[di].day}</td><td><b>${formatKg(x.weight)}</b></td><td>${d===null?'—':`${d>0?'+':''}${(Math.round(d*10)/10).toLocaleString('es-PY')} kg`}</td><td>${isPR?'<span class="pr-badge">🏆 PR</span>':d>0?'<span class="badge">↑ Subiste</span>':d<0?'<span class="muted">↓ Bajaste</span>':'Sin cambio'}</td></tr>`;
+  }).join('');
+  drawStrengthChart(h);
+}
+function drawStrengthChart(data){
+  const c=document.getElementById('strengthChart');if(!c)return;
+  const g=c.getContext('2d'),W=c.width,H=c.height,p=48;
+  g.clearRect(0,0,W,H);g.fillStyle='#fff';g.fillRect(0,0,W,H);
+  if(!data.length){g.fillStyle='#66716a';g.font='15px Arial';g.fillText('Tus cargas aparecerán aquí cuando empieces a registrarlas.',24,42);return}
+  const vals=data.map(x=>x.weight),mn=Math.min(...vals),mx=Math.max(...vals),pad=Math.max(2,(mx-mn)*.2),lo=Math.max(0,mn-pad),hi=mx+pad,range=hi-lo||1;
+  g.strokeStyle='#e2e8e4';g.lineWidth=1;
+  for(let i=0;i<5;i++){let y=p+i*(H-p*2)/4;g.beginPath();g.moveTo(p,y);g.lineTo(W-p,y);g.stroke()}
+  g.strokeStyle='#1f6b4f';g.lineWidth=3;g.beginPath();
+  data.forEach((d,i)=>{let x=p+(data.length===1?(W-p*2)/2:i*(W-p*2)/(data.length-1)),y=p+(hi-d.weight)/range*(H-p*2);i?g.lineTo(x,y):g.moveTo(x,y)});g.stroke();
+  data.forEach((d,i)=>{let x=p+(data.length===1?(W-p*2)/2:i*(W-p*2)/(data.length-1)),y=p+(hi-d.weight)/range*(H-p*2);g.fillStyle='#d26f49';g.beginPath();g.arc(x,y,5,0,Math.PI*2);g.fill();g.fillStyle='#17211b';g.font='12px Arial';g.fillText((Math.round(d.weight*10)/10)+' kg',Math.max(4,x-18),Math.max(14,y-10))});
+}
+
 function renderGym(){gymtabs.innerHTML=workouts.map((w,i)=>`<button class="tab ${i===gymDay?'active':''}" onclick="gymDay=${i};renderGym()">${w.day}</button>`).join('');let w=workouts[gymDay],k=new Date().toISOString().slice(0,10)+'-'+gymDay,l=db.workouts[k]||{sets:{},weights:{},notes:{},done:false};gymcontent.innerHTML=`<div class="card"><span class="badge">${w.day}</span><h2>${w.title}</h2><h3>Calentamiento</h3>${w.warm.map(x=>`<p>🏃 ${x}</p>`).join('')}</div><div class="card" style="margin-top:12px"><h3>Ejercicios</h3>${w.ex.map((e,i)=>exHTML(e,i,l)).join('')}</div><div class="card" style="margin-top:12px"><h3>Cardio final</h3><p>${w.cardio}</p></div><div class="actions" style="margin-top:12px"><button class="btn" onclick="finishWorkout()">${l.done?'✓ Día completado':'Marcar entrenamiento completado'}</button></div>`}
-function exHTML(e,i,l){let n=parseInt(e[1])||3,done=l.sets[i]||[];return `<div class="exercise"><div class="head" onclick="this.parentElement.classList.toggle('open')"><div><b>${e[0]}</b>${e[4]?`<div><span class="badge" style="margin-top:5px">${e[4]}</span></div>`:''}<div class="muted" style="margin-top:5px">${e[1]} · ${e[2]} · descanso ${e[3]}</div></div><span>⌄</span></div><div class="body"><div class="sets">${Array.from({length:n},(_,s)=>`<button class="set ${done[s]?'done':''}" onclick="toggleSet(${i},${s},this)">Serie ${s+1}</button>`).join('')}</div><div class="fields" style="margin-top:11px"><div><label>Peso usado</label><input value="${l.weights[i]||''}" onchange="saveEx(${i},'weights',this.value)"></div><div><label>Notas</label><input value="${l.notes[i]||''}" onchange="saveEx(${i},'notes',this.value)"></div><div><label>Técnica</label><a class="btn alt" target="_blank" href="https://www.youtube.com/results?search_query=${encodeURIComponent('técnica correcta '+e[0])}">Ver video</a></div></div></div></div>`}
-function log(){let k=new Date().toISOString().slice(0,10)+'-'+gymDay;if(!db.workouts[k])db.workouts[k]={sets:{},weights:{},notes:{},done:false};return db.workouts[k]}function toggleSet(i,s,b){let l=log();if(!l.sets[i])l.sets[i]=[];l.sets[i][s]=!l.sets[i][s];b.classList.toggle('done');save()}function saveEx(i,t,v){log()[t][i]=v;save()}function finishWorkout(){log().done=true;save();renderGym();renderCal();renderSummary();renderHistory()}renderGym();
+function exHTML(e,i,l){let n=parseInt(e[1])||3,done=l.sets[i]||[],prev=previousExerciseWeight(gymDay,i);return `<div class="exercise"><div class="head" onclick="this.parentElement.classList.toggle('open')"><div><b>${e[0]}</b>${e[4]?`<div><span class="badge" style="margin-top:5px">${e[4]}</span></div>`:''}<div class="muted" style="margin-top:5px">${e[1]} · ${e[2]} · descanso ${e[3]}</div>${prev!==null?`<div class="load-hint">Última carga registrada: <strong>${formatKg(prev)}</strong>. Usala como referencia para tu progresión.</div>`:''}</div><span>⌄</span></div><div class="body"><div class="sets">${Array.from({length:n},(_,s)=>`<button class="set ${done[s]?'done':''}" onclick="toggleSet(${i},${s},this)">Serie ${s+1}</button>`).join('')}</div><div class="fields" style="margin-top:11px"><div><label>Peso usado hoy (kg)</label><input inputmode="decimal" placeholder="${prev!==null?prev:'Ej.: 25'}" value="${l.weights[i]||''}" onchange="saveEx(${i},'weights',this.value)"></div><div><label>Notas</label><input value="${l.notes[i]||''}" onchange="saveEx(${i},'notes',this.value)"></div><div><label>Técnica</label><a class="btn alt" target="_blank" href="https://www.youtube.com/results?search_query=${encodeURIComponent('técnica correcta '+e[0])}">Ver video</a></div></div></div></div>`}
+function log(){let k=new Date().toISOString().slice(0,10)+'-'+gymDay;if(!db.workouts[k])db.workouts[k]={sets:{},weights:{},notes:{},done:false};return db.workouts[k]}function toggleSet(i,s,b){let l=log();if(!l.sets[i])l.sets[i]=[];l.sets[i][s]=!l.sets[i][s];b.classList.toggle('done');save()}function saveEx(i,t,v){log()[t][i]=v;save();if(t==='weights')renderStrengthProgress()}function finishWorkout(){log().done=true;save();renderGym();renderCal();renderSummary();renderHistory()}renderGym();
 function setTimer(s){tsec=s;clearInterval(tint);tint=null;timerBtn.textContent='Iniciar';clock.textContent=String(Math.floor(tsec/60)).padStart(2,'0')+':'+String(tsec%60).padStart(2,'0')}function toggleTimer(){if(tint){clearInterval(tint);tint=null;timerBtn.textContent='Continuar'}else{timerBtn.textContent='Pausar';tint=setInterval(()=>{if(tsec<=0){clearInterval(tint);tint=null;timerBtn.textContent='Iniciar';alert('Descanso terminado');return}tsec--;clock.textContent=String(Math.floor(tsec/60)).padStart(2,'0')+':'+String(tsec%60).padStart(2,'0')},1000)}}
 nutritionPlan.forEach((d,i)=>mealDay.innerHTML+=`<option value="${i}">${d.day}</option>`);
 mealDay.onchange=()=>{mealIdx=+mealDay.value;renderMeals()};
@@ -958,6 +1077,7 @@ function renderHistory(){let entries=historyEntries(),uniqueDates=[...new Set(en
 historyStats.innerHTML=`<div class="card stat"><small>Racha actual</small><b>${current} día${current===1?'':'s'}</b></div><div class="card stat"><small>Mejor racha</small><b>${best} día${best===1?'':'s'}</b></div><div class="card stat"><small>Esta semana</small><b>${thisWeek}/4</b></div><div class="card stat"><small>Total entrenamientos</small><b>${uniqueDates.length}</b></div>`;
 historyList.innerHTML=entries.slice(0,25).map(e=>{let info=workouts[e.gymIdx],dt=new Date(e.date+'T00:00:00'),label=dt.toLocaleDateString('es-PY',{weekday:'long',day:'numeric',month:'short'});return `<div class="history-item"><div><b>${info?info.day+' · '+info.title:'Entrenamiento'}</b><div class="muted" style="font-size:.85rem;text-transform:capitalize">${label}</div></div><span class="badge">✓ Completado</span></div>`}).join('')||'<p class="muted">Todavía no registraste ningún entrenamiento. Marcá tu primer día completado en "Mi rutina" y va a aparecer acá.</p>'}
 renderHistory();
+initStrengthProgress();
 shop.innerHTML=Object.entries(list).map(([cat,items])=>`<div class="card shop"><h3>${cat}</h3>${items.map(i=>`<label><input type="checkbox" ${db.shopping[i]?'checked':''} onchange="db.shopping['${i}']=this.checked;save()"><span>${i}</span></label>`).join('')}</div>`).join('');
 photoDate.value=new Date().toISOString().slice(0,10);photoInputs.innerHTML=['Frente','Perfil','Espalda'].map((x,i)=>`<div class="photo"><div><b>${x}</b><input id="ph${i}" type="file" accept="image/*" style="margin-top:9px"></div></div>`).join('');function dataURL(f){return new Promise(res=>{if(!f)return res(null);let r=new FileReader();r.onload=()=>res(r.result);r.readAsDataURL(f)})}async function savePhotos(){let imgs=await Promise.all([0,1,2].map(i=>dataURL(document.getElementById('ph'+i).files[0])));if(!imgs.some(Boolean))return alert('Selecciona al menos una foto');db.photos.push({id:Date.now(),date:photoDate.value,imgs});save();renderPhotos()}function renderPhotos(){photoHistory.innerHTML=db.photos.slice().reverse().map(p=>`<div class="card"><div class="actions" style="justify-content:space-between"><h3>${p.date}</h3><button class="btn danger" onclick="db.photos=db.photos.filter(x=>x.id!==${p.id});save();renderPhotos()">Eliminar</button></div><div class="photos">${p.imgs.map(x=>`<div class="photo">${x?`<img src="${x}">`:'Sin foto'}</div>`).join('')}</div></div>`).join('')||'<div class="card">Sin fotos guardadas</div>'}renderPhotos();
 function exportAll(){let b=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='mi_transformacion_respaldo.json';a.click()}importFile.onchange=e=>{let f=e.target.files[0],r=new FileReader();r.onload=()=>{try{db=JSON.parse(r.result);save();location.reload()}catch{alert('Archivo inválido')}};r.readAsText(f)};function clearAll(){if(confirm('¿Borrar todos los datos?')){localStorage.clear();location.reload()}}
