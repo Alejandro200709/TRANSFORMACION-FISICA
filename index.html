@@ -855,6 +855,412 @@ th,td{padding:12px}
  .strength-kpi b{font-size:1.18rem}
 }
 
+
+/* ===== DARK PERFORMANCE UI V12 ===== */
+:root{
+  --bg:#090d0b;
+  --card:#111713;
+  --card2:#151d18;
+  --ink:#edf4ef;
+  --muted:#8f9d94;
+  --green:#54d394;
+  --green2:#17382a;
+  --terr:#e17a52;
+  --terr2:#3a2119;
+  --line:#243028;
+  --dark:#07100b;
+  --danger:#ef6b6b;
+  --soft:#0d1310;
+  --shadow:0 18px 50px rgba(0,0,0,.28);
+}
+html,body{background:#090d0b!important;color:var(--ink)!important}
+body{
+  background:
+    radial-gradient(circle at 80% -10%,rgba(57,157,107,.12),transparent 34rem),
+    radial-gradient(circle at 10% 15%,rgba(225,122,82,.06),transparent 26rem),
+    #090d0b!important;
+}
+aside{
+  background:linear-gradient(180deg,#0b1510 0%,#0c1d15 100%)!important;
+  border-right:1px solid #1b2820!important;
+}
+.desktop-topbar{border-bottom:1px solid transparent}
+.topbar-status{color:#839087!important}
+.card,.exercise,.meal,.shop,.photo,.strength-chart-wrap{
+  background:linear-gradient(180deg,#121914,#101611)!important;
+  border-color:#233027!important;
+  box-shadow:var(--shadow)!important;
+}
+.card:hover,.exercise:hover,.meal:hover{border-color:#304237!important}
+.hero{
+  background:
+    radial-gradient(circle at 86% 25%,rgba(84,211,148,.14),transparent 17rem),
+    linear-gradient(130deg,#0e2b1d 0%,#174b34 58%,#26392f 100%)!important;
+  border:1px solid #26533e!important;
+  box-shadow:0 24px 70px rgba(0,0,0,.36)!important;
+}
+.hero .badge{background:#eaf8f0!important;color:#133b29!important}
+.stat:after{background:rgba(84,211,148,.08)!important}
+.stat b,.strength-kpi b,#summary h3{color:#f2f7f3!important}
+.muted,small{color:#8f9d94!important}
+.nav{color:#8fa197!important}
+.nav:hover{background:#13231a!important;color:#eaf5ee!important}
+.nav.active{
+  color:#f3fbf6!important;
+  background:linear-gradient(90deg,rgba(84,211,148,.16),rgba(84,211,148,.05))!important;
+  box-shadow:inset 3px 0 0 #54d394!important;
+}
+input,select,textarea{
+  background:#0c120e!important;
+  color:#eef5f0!important;
+  border-color:#2a382f!important;
+}
+input:focus,select:focus,textarea:focus{
+  border-color:#4aab78!important;
+  box-shadow:0 0 0 4px rgba(84,211,148,.10)!important;
+}
+.btn{background:linear-gradient(135deg,#e17a52,#bd5637)!important}
+.btn.alt{
+  background:#19392b!important;color:#79e3ae!important;border:1px solid #28513d!important;
+  box-shadow:none!important;
+}
+.btn.ghost{
+  background:#111814!important;color:#dce8e0!important;border-color:#2a382f!important;
+  box-shadow:none!important;
+}
+.btn.danger{background:#7f2f32!important;color:#ffdede!important}
+.tabs{background:#0d1410!important;border:1px solid #1f2b24!important}
+.tab{color:#98a79e!important}
+.tab.active{background:#1b2a21!important;color:#f3faf6!important;box-shadow:none!important}
+.head{background:#121914!important}
+.head:hover{background:#172019!important}
+.body{background:#0f1511!important;border-top-color:#243028!important}
+.set{background:#0c120e!important;color:#aab7af!important;border-color:#2b3930!important}
+.set.done{background:linear-gradient(135deg,#1d7650,#2ba66d)!important;color:white!important}
+.checklist label{background:#101712!important;border-color:#253229!important;color:#dce7df!important}
+.checklist label:hover{background:#152019!important;border-color:#355040!important}
+.checklist label:has(input:checked){background:#153425!important;border-color:#39785a!important;color:#b9f0d1!important}
+.bar{background:#202a23!important}
+#summary>div{background:#0e1510!important;border-color:#233028!important}
+.load-hint{background:#122c20!important;color:#a9c8b5!important}
+.load-hint strong{color:#73e1a9!important}
+.strength-kpi{background:#0d1410!important;border-color:#243028!important}
+.pr-badge{background:#332914!important;color:#f6d478!important;border-color:#5b4924!important}
+table{color:#dce7df!important}
+th,td{border-bottom-color:#233028!important}
+th{color:#87968d!important}
+.day{background:#0d1410!important;border-color:#233028!important;color:#abb8b0!important}
+.day.done{background:#173525!important;border-color:#2f684c!important;color:#bff0d3!important}
+.shop label{border-bottom-color:#202c24!important}
+.carb-card{
+  background:linear-gradient(135deg,#102018,#13251b)!important;
+  border-color:#2a4737!important;
+}
+.carb-option,.replacement-grid>div{
+  background:#0c1510!important;border-color:#24372c!important;color:#b7c7bd!important;
+}
+.carb-note{color:#a9bbb0!important}
+.nutrition-alert{
+  background:#12261b!important;border-color:#2a4d39!important;color:#b9dcc8!important;
+}
+.meal-tip{background:#211912!important;border-color:#3d2d20!important;color:#d4b9a6!important}
+.timer{
+  background:rgba(8,18,12,.96)!important;
+  border:1px solid #26372d!important;
+  box-shadow:0 18px 50px rgba(0,0,0,.5)!important;
+}
+.mobile-page-select{
+  background:rgba(13,19,15,.94)!important;
+  border-color:#29372e!important;
+}
+.mobile-page-select select{color:#e9f3ed!important}
+.strength-chart-wrap canvas,#wc,#wac{background:#0d1310!important}
+.food-history-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.food-history-kpi{background:#0d1410;border:1px solid #243028;border-radius:14px;padding:14px}
+.food-history-kpi small{display:block;color:#8f9d94;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.food-history-kpi b{display:block;margin-top:6px;color:#eef6f1;font-size:1.3rem}
+.food-history-table{overflow:auto;margin-top:12px}
+.food-history-table table{min-width:650px}
+.meal-consumed{
+  display:inline-flex;align-items:center;gap:7px;
+  background:#153a28!important;color:#78e0a9!important;border:1px solid #2c6649!important;
+}
+.quick-guide-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.quick-guide-row .btn{flex:0 1 auto}
+.resume-chip{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:7px 10px;border-radius:999px;
+  background:#10281c;border:1px solid #27543c;color:#8ce6b5;font-size:.76rem;font-weight:800;
+}
+@media(max-width:900px){
+ .food-history-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+ .food-history-kpi{padding:10px}
+ .food-history-kpi b{font-size:1rem}
+ .quick-guide-row{display:grid;grid-template-columns:1fr 1fr}
+ .quick-guide-row .btn{width:100%}
+}
+
+
+/* ===== PREMIUM DARK + DEMOS INTERNAS V13 ===== */
+:root{
+  --accent:#62e6a4;
+  --accent2:#8cf0bd;
+  --accent-soft:rgba(98,230,164,.12);
+  --orange:#ff8a5b;
+  --panel:#111914;
+  --panel-2:#151f19;
+  --panel-3:#0b120e;
+}
+body{
+  background:
+    radial-gradient(circle at 88% 4%,rgba(98,230,164,.10),transparent 25rem),
+    radial-gradient(circle at 15% 70%,rgba(255,138,91,.055),transparent 28rem),
+    #080c0a!important;
+}
+.hero{
+  min-height:250px!important;
+  background:
+    linear-gradient(120deg,rgba(9,34,22,.97),rgba(18,66,43,.94)),
+    radial-gradient(circle at 80% 30%,rgba(98,230,164,.2),transparent 18rem)!important;
+  border:1px solid rgba(98,230,164,.2)!important;
+}
+.hero:before{
+  content:"";
+  position:absolute;inset:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:28px 28px;
+  mask-image:linear-gradient(to right,transparent,black);
+}
+.card,.exercise,.meal{
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.exercise{
+  overflow:hidden;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.exercise:hover{
+  transform:translateY(-1px);
+  border-color:#335243!important;
+  box-shadow:0 18px 38px rgba(0,0,0,.24)!important;
+}
+.exercise-title-row{
+  display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+}
+.exercise-index{
+  width:28px;height:28px;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(145deg,#183e2c,#205a3d);
+  color:#8cf0bd;font-size:.72rem;font-weight:900;border:1px solid #2f6b4d;
+}
+.demo-btn{
+  display:inline-flex!important;align-items:center;justify-content:center;gap:8px;
+  background:linear-gradient(135deg,#1a4732,#246846)!important;
+  color:#a8f4cb!important;border:1px solid #337553!important;
+  box-shadow:0 8px 22px rgba(22,103,68,.2)!important;
+}
+.demo-btn:before{content:"▶";font-size:.72rem}
+.exercise-mini-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}
+.technique-pills{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0}
+.technique-pills span{
+  display:inline-flex;align-items:center;
+  padding:5px 8px;border-radius:999px;
+  background:#0d1912;border:1px solid #26382e;color:#90a398;
+  font-size:.69rem;font-weight:750;
+}
+
+/* Modal */
+.exercise-modal{
+  position:fixed;inset:0;z-index:1000;
+  display:none;align-items:center;justify-content:center;
+  padding:18px;
+}
+.exercise-modal.open{display:flex}
+.exercise-modal-backdrop{
+  position:absolute;inset:0;
+  background:rgba(2,7,4,.82);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.exercise-modal-panel{
+  position:relative;z-index:2;
+  width:min(960px,100%);
+  max-height:min(88vh,880px);
+  overflow:auto;
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 80% 0%,rgba(98,230,164,.09),transparent 22rem),
+    linear-gradient(180deg,#111a14,#0c120e);
+  border:1px solid #2a3d32;
+  box-shadow:0 30px 100px rgba(0,0,0,.6);
+}
+.exercise-modal-top{
+  position:sticky;top:0;z-index:5;
+  display:flex;justify-content:space-between;gap:14px;align-items:flex-start;
+  padding:18px 20px;
+  background:rgba(14,21,16,.9);
+  border-bottom:1px solid #24342b;
+  backdrop-filter:blur(16px);
+}
+.exercise-modal-top h2{margin:4px 0 0;font-size:1.4rem}
+.exercise-modal-close{
+  width:38px;height:38px;border-radius:12px;
+  border:1px solid #304137;background:#121a15;color:#dce9e1;
+  font-size:1.15rem;
+}
+.exercise-modal-content{
+  display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);
+  gap:18px;padding:18px;
+}
+.demo-stage{
+  min-height:430px;
+  border-radius:20px;
+  overflow:hidden;
+  display:grid;place-items:center;
+  position:relative;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(98,230,164,.09),transparent 16rem),
+    linear-gradient(180deg,#0b130e,#07100b);
+  border:1px solid #213329;
+}
+.demo-stage:before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:30px 30px;
+}
+.demo-stage svg{width:min(520px,94%);height:auto;position:relative;z-index:2}
+.demo-caption{
+  position:absolute;left:14px;bottom:14px;z-index:3;
+  display:flex;align-items:center;gap:8px;
+  padding:7px 10px;border-radius:999px;
+  background:rgba(7,15,10,.78);border:1px solid #2c4638;
+  color:#a7b9ae;font-size:.75rem;
+}
+.demo-caption i{width:7px;height:7px;border-radius:50%;background:#62e6a4;box-shadow:0 0 0 5px rgba(98,230,164,.1)}
+.tech-panel{
+  display:flex;flex-direction:column;gap:12px;
+}
+.tech-box{
+  padding:15px;border-radius:16px;
+  background:#101813;border:1px solid #24342b;
+}
+.tech-box h3{margin:0 0 9px;font-size:.9rem;color:#e9f4ed}
+.tech-box ul{margin:0;padding-left:18px;color:#a5b4aa;font-size:.84rem;line-height:1.5}
+.tech-box.bad{border-color:#493027;background:#1a120f}
+.tech-box.bad h3{color:#ffad8e}
+.tech-box.good{border-color:#28543d;background:#0f1c15}
+.tech-box.good h3{color:#8df0b8}
+.demo-metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.demo-metric{
+  padding:11px;border-radius:13px;background:#0d1410;border:1px solid #223129
+}
+.demo-metric small{display:block;color:#73837a;font-size:.66rem;text-transform:uppercase;font-weight:850}
+.demo-metric b{display:block;margin-top:5px;color:#edf5f0;font-size:.92rem}
+
+/* SVG animation primitives */
+.svg-skin{stroke:#c5d3ca;stroke-width:9;stroke-linecap:round;fill:none}
+.svg-joint{fill:#d9e5de}
+.svg-equip{stroke:#62e6a4;stroke-width:8;stroke-linecap:round;fill:none}
+.svg-ghost{stroke:#274035;stroke-width:4;stroke-dasharray:8 8;fill:none}
+.svg-arrow{stroke:#ff8a5b;stroke-width:5;stroke-linecap:round;fill:none}
+.svg-floor{stroke:#24352b;stroke-width:4}
+.svg-body{transform-box:fill-box;transform-origin:center}
+.svg-limb{transform-box:fill-box;transform-origin:center}
+.anim-press .moving{animation:pressMove 1.8s ease-in-out infinite alternate}
+.anim-squat .moving{animation:squatMove 1.8s ease-in-out infinite alternate}
+.anim-curl .moving{animation:curlMove 1.7s ease-in-out infinite alternate}
+.anim-row .moving{animation:rowMove 1.8s ease-in-out infinite alternate}
+.anim-pull .moving{animation:pullMove 1.8s ease-in-out infinite alternate}
+.anim-leg .moving{animation:legMove 1.8s ease-in-out infinite alternate}
+.anim-core .moving{animation:coreMove 1.8s ease-in-out infinite alternate}
+.anim-calf .moving{animation:calfMove 1.5s ease-in-out infinite alternate}
+@keyframes pressMove{from{transform:translateY(-50px)}to{transform:translateY(12px)}}
+@keyframes squatMove{from{transform:translateY(-45px)}to{transform:translateY(22px)}}
+@keyframes curlMove{from{transform:rotate(0deg)}to{transform:rotate(-60deg)}}
+@keyframes rowMove{from{transform:translateX(42px)}to{transform:translateX(-8px)}}
+@keyframes pullMove{from{transform:translateY(-45px)}to{transform:translateY(28px)}}
+@keyframes legMove{from{transform:rotate(0deg)}to{transform:rotate(-38deg)}}
+@keyframes coreMove{from{transform:rotate(0deg)}to{transform:rotate(-12deg)}}
+@keyframes calfMove{from{transform:translateY(0)}to{transform:translateY(-18px)}}
+
+@media(max-width:800px){
+  .exercise-modal{padding:0;align-items:flex-end}
+  .exercise-modal-panel{
+    width:100%;max-height:94vh;
+    border-radius:24px 24px 0 0;
+  }
+  .exercise-modal-content{grid-template-columns:1fr;padding:12px}
+  .demo-stage{min-height:330px}
+  .exercise-modal-top{padding:15px}
+  .exercise-modal-top h2{font-size:1.15rem}
+}
+
+
+/* ===== VIDEO TECHNIQUE LIBRARY V14 ===== */
+.video-stage{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:18px;
+  overflow:hidden;
+  background:#050806;
+  border:1px solid #26362d;
+  box-shadow:0 18px 40px rgba(0,0,0,.28);
+}
+.video-stage iframe{
+  position:absolute;inset:0;width:100%;height:100%;border:0;
+}
+.video-source{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:10px 12px;margin-top:10px;border-radius:12px;
+  background:#0d1510;border:1px solid #223229;color:#8fa198;font-size:.75rem;
+}
+.video-source strong{color:#cfe0d6}
+.no-video{
+  min-height:330px;display:grid;place-items:center;text-align:center;padding:28px;
+  border-radius:18px;background:
+    radial-gradient(circle at 50% 35%,rgba(98,230,164,.08),transparent 15rem),
+    #08100b;border:1px solid #25352c;
+}
+.no-video .icon{
+  width:66px;height:66px;border-radius:20px;display:grid;place-items:center;
+  margin:0 auto 14px;background:#132a1e;border:1px solid #2a5a40;color:#75e6ac;font-size:1.7rem;
+}
+.no-video h3{margin:0 0 8px;color:#edf6f0}
+.no-video p{margin:0;color:#87998e;max-width:440px;line-height:1.5}
+.technique-header{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  margin-bottom:12px;
+}
+.technique-header .verified{
+  display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border-radius:999px;
+  background:#123423;border:1px solid #286044;color:#7de7ad;font-size:.7rem;font-weight:850;
+}
+.cue-steps{display:grid;gap:8px}
+.cue-step{
+  display:grid;grid-template-columns:28px 1fr;gap:9px;align-items:start;
+  padding:10px;border-radius:12px;background:#0d1510;border:1px solid #223229;
+}
+.cue-step span{
+  width:26px;height:26px;border-radius:8px;display:grid;place-items:center;
+  background:#163625;color:#7ce4ab;font-size:.72rem;font-weight:900;
+}
+.cue-step b{display:block;margin-bottom:3px;color:#e7f1eb;font-size:.82rem}
+.cue-step p{margin:0;color:#91a198;font-size:.78rem;line-height:1.42}
+.professional-note{
+  margin-top:10px;padding:10px 12px;border-radius:11px;
+  background:#16120f;border:1px solid #3b2d24;color:#c9b1a1;font-size:.76rem;line-height:1.45;
+}
+@media(max-width:800px){
+  .video-stage{border-radius:14px}
+  .no-video{min-height:250px}
+}
+
 </style>
 </head>
 <body>
@@ -884,7 +1290,22 @@ th,td{padding:12px}
 
 <section id="gym" class="page"><h1>Mi rutina de 4 días</h1><p class="muted">Marca series, registra pesos y usa el temporizador de descanso.</p><div class="tabs" id="gymtabs"></div><div id="gymcontent"></div><div class="timer"><div><small>Descanso</small><br><b id="clock">01:00</b></div><div class="actions"><button class="btn ghost" onclick="setTimer(45)">45 s</button><button class="btn ghost" onclick="setTimer(60)">60 s</button><button class="btn ghost" onclick="setTimer(90)">90 s</button><button class="btn" id="timerBtn" onclick="toggleTimer()">Iniciar</button></div></div></section>
 
-<section id="food" class="page"><h1>Nutrición y recetas</h1><p class="muted">Plan completo de 14 días: cantidades exactas, carbohidrato indicado, equivalencias y preparación paso a paso.</p><div class="actions"><select id="mealDay" style="max-width:220px"></select><button class="btn ghost" onclick="moveMeal(-1)">←</button><button class="btn" onclick="moveMeal(1)">→</button><button class="btn alt" onclick="randomMeal()">🔀 Sorprendeme (día al azar)</button></div><div class="card" id="mealContent" style="margin-top:14px"></div></section>
+<section id="food" class="page"><h1>Nutrición y recetas</h1><p class="muted">Plan completo de 14 días: cantidades exactas, recetas y registro de lo que realmente vas cumpliendo.</p>
+<div class="actions"><select id="mealDay" style="max-width:220px"></select><button class="btn ghost" onclick="moveMeal(-1)">←</button><button class="btn" onclick="moveMeal(1)">→</button><button class="btn alt" onclick="randomMeal()">🔀 Día al azar</button></div>
+<div class="card" id="mealContent" style="margin-top:14px"></div>
+<div class="card" style="margin-top:14px">
+  <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap">
+    <div><span class="badge">ALIMENTACIÓN</span><h2 style="margin:8px 0 4px">Historial de comidas</h2><p class="muted" style="margin:0">Se guarda cada comida que marques como consumida.</p></div>
+    <span class="resume-chip">Reinicio diario · 06:00</span>
+  </div>
+  <div class="food-history-grid">
+    <div class="food-history-kpi"><small>Hoy</small><b id="foodToday">0 / 4</b></div>
+    <div class="food-history-kpi"><small>Últimos 7 días</small><b id="foodWeek">0%</b></div>
+    <div class="food-history-kpi"><small>Total registrado</small><b id="foodTotal">0</b></div>
+  </div>
+  <div class="food-history-table"><table><thead><tr><th>Fecha</th><th>Comida</th><th>Plato</th><th>Plan</th><th></th></tr></thead><tbody id="foodRows"></tbody></table></div>
+</div>
+</section>
 
 <section id="progress" class="page"><h1>Progreso corporal</h1><div class="card"><form id="pf"><div class="formgrid"><div><label>Fecha</label><input id="pd" type="date" required></div><div><label>Peso</label><input id="pw" type="number" step=".1" required></div><div><label>Cintura</label><input id="pwa" type="number" step=".1"></div><div><label>Pecho</label><input id="pch" type="number" step=".1"></div><div><label>Brazo</label><input id="parm" type="number" step=".1"></div><div><label>Pierna</label><input id="pleg" type="number" step=".1"></div><div><label>Entrenamientos</label><input id="pwo" type="number" min="0" max="7"></div><div><label>Pasos promedio</label><input id="psteps" type="number"></div><div><label>Cumplimiento %</label><input id="pcomp" type="number" min="0" max="100"></div></div><div style="margin-top:12px"><label>Notas</label><textarea id="pnotes"></textarea></div><div class="actions" style="margin-top:12px"><button class="btn">Guardar semana</button></div></form></div><div class="grid g2" style="margin-top:14px"><div class="card"><h3>Peso</h3><canvas id="wc" width="800" height="260"></canvas></div><div class="card"><h3>Cintura</h3><canvas id="wac" width="800" height="260"></canvas></div></div><div class="card" style="margin-top:14px"><div style="overflow:auto"><table><thead><tr><th>Fecha</th><th>Peso</th><th>Cintura</th><th>Gym</th><th>%</th><th></th></tr></thead><tbody id="rows"></tbody></table></div></div></section>
 
@@ -934,10 +1355,18 @@ const workouts=[
 ];
 const nutritionPlan=[{"day":"Día 1","meals":[{"label":"🌅 Desayuno","name":"Huevos revueltos con avena","ingredients":["3 huevos","40 g de avena","200 ml de leche descremada","1 banana"],"steps":["Calentar la leche con la avena en microondas 2 min, o en olla 3 min.","Batir los huevos con sal, cocinar en sartén revolviendo 3 min.","Servir todo junto con la banana en rodajas."],"carb":{"title":"Avena","amount":"40 g","raw":"40 g","household":"4–5 cucharadas rasas","replacements":["2 rebanadas de pan integral","150 g de mandioca cocida"],"note":"No hace falta agregar otro carbohidrato si también lleva banana."},"time":"12–20 min"},{"label":"🍽️ Almuerzo","name":"Pollo a la plancha con papa hervida y ensalada","ingredients":["180 g de pechuga de pollo","250 g de papa (1 papa grande o 2 pequeñas)","lechuga","tomate","aceite de oliva","sal"],"steps":["Sazonar el pollo con sal y cocinar en sartén 5-6 min por lado.","Cortar lechuga y tomate, aliñar con aceite.","Hervir la papa en cubos durante 12–15 min, escurrir y servir con el pollo y la ensalada."],"carb":{"title":"Papa","amount":"250 g cocida","raw":"280–300 g antes de cocinar","household":"1 papa grande o 2 pequeñas","replacements":["180 g de batata cocida","150–180 g de mandioca cocida"],"note":"La papa es la opción principal. Elegí una sola fuente de carbohidrato y no sumes los reemplazos."},"time":"12–20 min"},{"label":"🏃 Merienda pre-entreno","name":"Banana con mantequilla de maní","ingredients":["1 banana","1 cda de mantequilla de maní"],"steps":["Untar la mantequilla de maní sobre la banana cortada al medio. Listo."],"carb":{"title":"Fruta","amount":"1 porción","raw":"—","household":"1 banana o 1 manzana o ½ taza de frutos rojos","replacements":["1 naranja grande","2 mandarinas"],"note":"La fruta es el carbohidrato principal de esta merienda o desayuno."},"time":"12–20 min"},{"label":"🌙 Cena","name":"Huevos revueltos con vegetales","ingredients":["3 huevos","1 taza de espinaca o vegetal a elección","sal"],"steps":["Saltear el vegetal 2 min en sartén.","Agregar los huevos batidos, revolver 3 min hasta cuajar."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]},{"day":"Día 2","meals":[{"label":"🌅 Desayuno","name":"Yogur con granola","ingredients":["200 g de yogur griego","25 g de granola","1 fruta picada"],"steps":["Mezclar todo en un bowl. Listo, sin cocción."],"carb":{"title":"Granola","amount":"25 g","raw":"25 g","household":"≈ 2 cucharadas","replacements":["30 g de avena","1 rebanada de pan integral"],"note":"Elegí una sola fuente de carbohidrato en esta comida."},"time":"5–10 min"},{"label":"🍽️ Almuerzo","name":"Carne a la plancha con puré de mandioca","ingredients":["180 g de carne magra","200 g de mandioca (puede ser congelada precocida)","ensalada mixta","sal","aceite de oliva"],"steps":["Hervir la mandioca 15-20 min (o usar precocida, solo calentar) y pisar con un tenedor.","Cocinar la carne en sartén 4-5 min por lado con sal.","Servir con la ensalada."],"carb":{"title":"Mandioca","amount":"200 g cocida","raw":"230–250 g en crudo","household":"≈ 2 trozos medianos","replacements":["250 g de papa cocida","180 g de batata cocida"],"note":"Elegí una sola fuente de carbohidrato en esta comida."},"time":"12–20 min"},{"label":"🏃 Merienda pre-entreno","name":"Batido rápido","ingredients":["1 banana","200 ml de leche descremada","1 cda de avena"],"steps":["Licuar todo 1 min. Listo."],"carb":{"title":"Avena","amount":"25–40 g","raw":"25–40 g","household":"4–5 cucharadas rasas","replacements":["2 rebanadas de pan integral","150 g de mandioca cocida"],"note":"No hace falta agregar otro carbohidrato si también lleva banana."},"time":"5–10 min"},{"label":"🌙 Cena","name":"Tortilla de claras con queso","ingredients":["4 claras + 1 huevo entero","30 g de queso rallado","sal"],"steps":["Batir los huevos con sal, agregar el queso.","Cocinar en sartén 4-5 min tapado a fuego bajo."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]},{"day":"Día 3","meals":[{"label":"🌅 Desayuno","name":"Batido proteico","ingredients":["1 scoop de proteína (o 200 g yogur griego)","1 banana","200 ml de agua o leche"],"steps":["Licuar todo 1 min. Servir."],"carb":{"title":"Fruta","amount":"1 porción","raw":"—","household":"1 banana o 1 manzana o ½ taza de frutos rojos","replacements":["1 naranja grande","2 mandarinas"],"note":"La fruta es el carbohidrato principal de esta merienda o desayuno."},"time":"5–10 min"},{"label":"🍽️ Almuerzo","name":"Pollo al horno con vegetales (todo junto en la bandeja)","ingredients":["180 g de pollo","1 taza de vegetales mixtos (zapallito, morrón, cebolla)","sal","aceite de oliva"],"steps":["Cortar todo y colocar en una bandeja para horno, rociar con aceite y sal.","Hornear a 200°C por 25-30 min. Un solo paso de cocción, sin vigilar."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"25–30 min"},{"label":"🏃 Merienda pre-entreno","name":"Yogur con miel","ingredients":["200 g de yogur natural","1 cdita de miel"],"steps":["Mezclar y listo."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"5–10 min"},{"label":"🌙 Cena","name":"Ensalada de pollo (con sobras del almuerzo)","ingredients":["150 g de pollo cocido (podés usar sobras)","hojas verdes","tomate","aceite de oliva"],"steps":["Cortar el pollo y mezclar con las hojas verdes y tomate.","Aliñar con aceite. Sin cocción."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]},{"day":"Día 4","meals":[{"label":"🌅 Desayuno","name":"Tostadas con huevo","ingredients":["2 rebanadas de pan integral","2 huevos","sal"],"steps":["Tostar el pan.","Freír o revolver los huevos 3-4 min. Servir juntos."],"carb":{"title":"Pan integral","amount":"2 rebanadas","raw":"30–35 g por rebanada","household":"2 rebanadas","replacements":["40 g de avena","150 g de mandioca cocida"],"note":"Elegí una sola fuente de carbohidrato en esta comida."},"time":"5–10 min"},{"label":"🍽️ Almuerzo","name":"Carne picada con papa en cubos (una sola sartén)","ingredients":["180 g de carne picada magra","250 g de papa cocida en cubos","1/2 cebolla","sal","condimento a gusto"],"steps":["Saltear la cebolla picada 2 min, agregar la carne y cocinar 6-7 min desmenuzando con la cuchara.","Agregar la papa previamente hervida y cortada en cubos; dorar 4–5 min junto con la carne y servir."],"carb":{"title":"Papa","amount":"250 g cocida","raw":"280–300 g antes de cocinar","household":"1 papa grande o 2 pequeñas","replacements":["180 g de batata cocida","150–180 g de mandioca cocida"],"note":"La papa es la opción principal. Elegí una sola fuente de carbohidrato y no sumes los reemplazos."},"time":"12–20 min"},{"label":"🏃 Merienda pre-entreno","name":"Fruta con almendras","ingredients":["1 manzana","15 g de almendras"],"steps":["Comer juntos, sin preparación."],"carb":{"title":"Fruta","amount":"1 porción","raw":"—","household":"1 banana o 1 manzana o ½ taza de frutos rojos","replacements":["1 naranja grande","2 mandarinas"],"note":"La fruta es el carbohidrato principal de esta merienda o desayuno."},"time":"5–10 min"},{"label":"🌙 Cena","name":"Huevos revueltos con jamón","ingredients":["3 huevos","50 g de jamón cocido en cubos","sal"],"steps":["Saltear el jamón 1 min, agregar los huevos batidos y revolver 3 min."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]},{"day":"Día 5","meals":[{"label":"🌅 Desayuno","name":"Avena rápida con banana","ingredients":["40 g de avena","200 ml de leche descremada","1/2 banana"],"steps":["Calentar todo junto en microondas 2 min (o en olla 3 min).","Agregar la banana en rodajas."],"carb":{"title":"Avena","amount":"40 g","raw":"40 g","household":"4–5 cucharadas rasas","replacements":["2 rebanadas de pan integral","150 g de mandioca cocida"],"note":"No hace falta agregar otro carbohidrato si también lleva banana."},"time":"12–20 min"},{"label":"🍽️ Almuerzo","name":"Pollo a la plancha con batata al microondas","ingredients":["180 g de pechuga de pollo","1 batata mediana","ensalada verde","sal"],"steps":["Pinchar la batata con un tenedor y cocinar en microondas 6-8 min hasta que esté blanda.","Cocinar el pollo en sartén 5-6 min por lado.","Servir con la ensalada."],"carb":{"title":"Batata","amount":"180–200 g cocida","raw":"200–220 g en crudo","household":"1 unidad mediana","replacements":["150 g de arroz cocido","200 g de papa","150–180 g de mandioca"],"note":"Elegí una sola fuente de carbohidrato en esta comida."},"time":"12–20 min"},{"label":"🏃 Merienda pre-entreno","name":"Yogur con banana","ingredients":["200 g de yogur griego","1/2 banana"],"steps":["Mezclar y listo."],"carb":{"title":"Fruta","amount":"1 porción","raw":"—","household":"1 banana o 1 manzana o ½ taza de frutos rojos","replacements":["1 naranja grande","2 mandarinas"],"note":"La fruta es el carbohidrato principal de esta merienda o desayuno."},"time":"5–10 min"},{"label":"🌙 Cena","name":"Tortilla simple de queso","ingredients":["3 huevos","30 g de queso","sal"],"steps":["Batir los huevos con sal, agregar el queso.","Cocinar en sartén 4-5 min tapado."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]},{"day":"Día 6","meals":[{"label":"🌅 Desayuno","name":"Yogur con avena cruda","ingredients":["200 g de yogur griego","30 g de avena","1 cdita de miel"],"steps":["Mezclar todo, dejar reposar 5 min. Sin cocción."],"carb":{"title":"Avena","amount":"30 g","raw":"30 g","household":"4–5 cucharadas rasas","replacements":["2 rebanadas de pan integral","150 g de mandioca cocida"],"note":"No hace falta agregar otro carbohidrato si también lleva banana."},"time":"5–10 min"},{"label":"🍽️ Almuerzo","name":"Carne magra con papa dorada","ingredients":["180 g de carne magra","250 g de papa cocida","ensalada","sal"],"steps":["Cocinar la carne en sartén 4-5 min por lado.","Hervir la papa en cubos durante 12–15 min, escurrir y dorar 3 min en la sartén.","Servir junto con la ensalada."],"carb":{"title":"Papa","amount":"250 g cocida","raw":"280–300 g antes de cocinar","household":"1 papa grande o 2 pequeñas","replacements":["180 g de batata cocida","150–180 g de mandioca cocida"],"note":"La papa es la opción principal. Elegí una sola fuente de carbohidrato y no sumes los reemplazos."},"time":"12–20 min"},{"label":"🏃 Merienda pre-entreno","name":"Batido de proteína","ingredients":["1 scoop de proteína (o yogur griego)","200 ml de leche o agua"],"steps":["Licuar o batir bien. Listo."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"5–10 min"},{"label":"🌙 Cena","name":"Huevos revueltos con tomate","ingredients":["3 huevos","1/2 tomate picado","sal"],"steps":["Saltear el tomate 1 min, agregar los huevos batidos y revolver 3 min."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]},{"day":"Día 7","meals":[{"label":"🌅 Desayuno","name":"Tostadas con huevo y fruta","ingredients":["2 rebanadas de pan integral","2 huevos","1 fruta"],"steps":["Tostar el pan, cocinar los huevos a gusto (3-4 min).","Servir con la fruta."],"carb":{"title":"Pan integral","amount":"2 rebanadas","raw":"30–35 g por rebanada","household":"2 rebanadas","replacements":["40 g de avena","150 g de mandioca cocida"],"note":"Elegí una sola fuente de carbohidrato en esta comida."},"time":"5–10 min"},{"label":"🍽️ Almuerzo","name":"Comida libre balanceada","ingredients":["Proteína a elección (pollo o carne, ~180 g)","arroz o batata","vegetales"],"steps":["Cocinar la proteína a la plancha y acompañar con el carbohidrato y vegetales, sin excederte en frituras."],"carb":{"title":"Papa","amount":"250 g cocida","raw":"280–300 g antes de cocinar","household":"1 papa grande o 2 pequeñas","replacements":["180 g de batata cocida","150–180 g de mandioca cocida"],"note":"La papa es la opción principal. Elegí una sola fuente de carbohidrato y no sumes los reemplazos."},"time":"12–20 min"},{"label":"🏃 Merienda pre-entreno","name":"Yogur con fruta","ingredients":["200 g de yogur","1 fruta picada"],"steps":["Mezclar y listo."],"carb":{"title":"Fruta","amount":"1 porción","raw":"—","household":"1 banana o 1 manzana o ½ taza de frutos rojos","replacements":["1 naranja grande","2 mandarinas"],"note":"La fruta es el carbohidrato principal de esta merienda o desayuno."},"time":"5–10 min"},{"label":"🌙 Cena","name":"Proteína magra simple con ensalada","ingredients":["150 g de pollo o carne","ensalada verde","sal"],"steps":["Cocinar la proteína en sartén 5 min por lado, servir con la ensalada."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]},{"day":"Día 8","meals":[{"label":"🌅 Desayuno","name":"Panqueque rápido de banana y huevo","ingredients":["1 banana","2 huevos","canela"],"steps":["Pisar la banana, mezclar con los huevos batidos.","Cocinar en sartén 2-3 min por lado hasta dorar."],"carb":{"title":"Fruta","amount":"1 porción","raw":"—","household":"1 banana o 1 manzana o ½ taza de frutos rojos","replacements":["1 naranja grande","2 mandarinas"],"note":"La fruta es el carbohidrato principal de esta merienda o desayuno."},"time":"12–20 min"},{"label":"🍽️ Almuerzo","name":"Pollo al horno con papa y vegetales (bandeja única)","ingredients":["180 g de pollo","250 g de papa cocida en cubos","vegetales mixtos","sal","aceite de oliva"],"steps":["Colocar el pollo y los vegetales en una bandeja, rociar con aceite y sal.","Hornear a 200°C durante 30–35 min, removiendo la papa a mitad de cocción."],"carb":{"title":"Papa","amount":"250 g cocida","raw":"280–300 g antes de cocinar","household":"1 papa grande o 2 pequeñas","replacements":["180 g de batata cocida","150–180 g de mandioca cocida"],"note":"La papa es la opción principal. Elegí una sola fuente de carbohidrato y no sumes los reemplazos."},"time":"25–30 min"},{"label":"🏃 Merienda pre-entreno","name":"Tostada con mantequilla de maní","ingredients":["1 rebanada de pan integral","1 cda de mantequilla de maní"],"steps":["Tostar y untar. Listo."],"carb":{"title":"Pan integral","amount":"1 rebanada","raw":"30–35 g por rebanada","household":"1 rebanada","replacements":["40 g de avena","150 g de mandioca cocida"],"note":"Elegí una sola fuente de carbohidrato en esta comida."},"time":"5–10 min"},{"label":"🌙 Cena","name":"Revuelto de huevo con zapallito","ingredients":["3 huevos","1 zapallito en rodajas","sal"],"steps":["Saltear el zapallito 3-4 min, agregar los huevos batidos y revolver 3 min."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]},{"day":"Día 9","meals":[{"label":"🌅 Desayuno","name":"Yogur con miel y frutos rojos","ingredients":["200 g de yogur griego","1 cdita de miel","frutos rojos"],"steps":["Mezclar todo. Sin cocción."],"carb":{"title":"Fruta","amount":"1 porción","raw":"—","household":"1 banana o 1 manzana o ½ taza de frutos rojos","replacements":["1 naranja grande","2 mandarinas"],"note":"La fruta es el carbohidrato principal de esta merienda o desayuno."},"time":"5–10 min"},{"label":"🍽️ Almuerzo","name":"Bife con batata al microondas","ingredients":["180 g de bife magro","1 batata mediana","ensalada","sal"],"steps":["Cocinar la batata en microondas 6-8 min (pinchada con tenedor).","Cocinar el bife en sartén 4-5 min por lado.","Servir con la ensalada."],"carb":{"title":"Batata","amount":"180–200 g cocida","raw":"200–220 g en crudo","household":"1 unidad mediana","replacements":["150 g de arroz cocido","200 g de papa","150–180 g de mandioca"],"note":"Elegí una sola fuente de carbohidrato en esta comida."},"time":"12–20 min"},{"label":"🏃 Merienda pre-entreno","name":"Batido de avena y frutos rojos","ingredients":["30 g de avena","1/2 taza de frutos rojos","200 ml de leche"],"steps":["Licuar todo. Listo."],"carb":{"title":"Avena","amount":"30 g","raw":"30 g","household":"4–5 cucharadas rasas","replacements":["2 rebanadas de pan integral","150 g de mandioca cocida"],"note":"No hace falta agregar otro carbohidrato si también lleva banana."},"time":"5–10 min"},{"label":"🌙 Cena","name":"Tortilla de champiñones","ingredients":["3 huevos","1 taza de champiñones fileteados","sal"],"steps":["Saltear los champiñones 3-4 min.","Agregar los huevos batidos, cocinar tapado 4 min."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]},{"day":"Día 10","meals":[{"label":"🌅 Desayuno","name":"Batido verde proteico","ingredients":["1 scoop de proteína (o yogur griego)","1 taza de espinaca","1/2 banana","200 ml de agua o leche"],"steps":["Licuar todo 1-2 min. Listo."],"carb":{"title":"Fruta","amount":"1 porción","raw":"—","household":"1 banana o 1 manzana o ½ taza de frutos rojos","replacements":["1 naranja grande","2 mandarinas"],"note":"La fruta es el carbohidrato principal de esta merienda o desayuno."},"time":"5–10 min"},{"label":"🍽️ Almuerzo","name":"Pollo desmenuzado con papa y ensalada","ingredients":["180 g de pollo cocido (podés cocinar de más otro día y guardarlo)","250 g de papa hervida o al horno","ensalada","sal"],"steps":["Desmenuzar el pollo y calentarlo 2 min. Hervir la papa en cubos 12–15 min si no está preparada.","Servir con la papa hervida o al horno y la ensalada."],"carb":{"title":"Papa","amount":"250 g cocida","raw":"280–300 g antes de cocinar","household":"1 papa grande o 2 pequeñas","replacements":["180 g de batata cocida","150–180 g de mandioca cocida"],"note":"La papa es la opción principal. Elegí una sola fuente de carbohidrato y no sumes los reemplazos."},"time":"12–20 min"},{"label":"🏃 Merienda pre-entreno","name":"Yogur con granola","ingredients":["200 g de yogur natural","25 g de granola"],"steps":["Mezclar y listo."],"carb":{"title":"Granola","amount":"25 g","raw":"25 g","household":"≈ 2 cucharadas","replacements":["30 g de avena","1 rebanada de pan integral"],"note":"Elegí una sola fuente de carbohidrato en esta comida."},"time":"5–10 min"},{"label":"🌙 Cena","name":"Huevos revueltos con espinaca","ingredients":["3 huevos","1 taza de espinaca","sal"],"steps":["Saltear la espinaca 2 min, agregar los huevos batidos y revolver 3 min."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]},{"day":"Día 11","meals":[{"label":"🌅 Desayuno","name":"Tostada con palta y huevo","ingredients":["1 rebanada de pan integral","1/4 de palta","1 huevo","sal"],"steps":["Tostar el pan, pisar la palta encima.","Cocinar el huevo a gusto (3-4 min) y colocar sobre la tostada."],"carb":{"title":"Pan integral","amount":"1 rebanada","raw":"30–35 g por rebanada","household":"1 rebanada","replacements":["40 g de avena","150 g de mandioca cocida"],"note":"Elegí una sola fuente de carbohidrato en esta comida."},"time":"5–10 min"},{"label":"🍽️ Almuerzo","name":"Carne magra con mandioca","ingredients":["180 g de carne magra","200 g de mandioca (precocida o congelada)","ensalada","sal"],"steps":["Calentar la mandioca 5 min (o hervir si es fresca, 15-20 min).","Cocinar la carne en sartén 4-5 min por lado.","Servir con la ensalada."],"carb":{"title":"Mandioca","amount":"200 g cocida","raw":"230–250 g en crudo","household":"≈ 2 trozos medianos","replacements":["250 g de papa cocida","180 g de batata cocida"],"note":"Elegí una sola fuente de carbohidrato en esta comida."},"time":"12–20 min"},{"label":"🏃 Merienda pre-entreno","name":"Batido de proteína y avena","ingredients":["1 scoop de proteína (o yogur griego)","30 g de avena","200 ml de leche"],"steps":["Licuar todo. Listo."],"carb":{"title":"Avena","amount":"30 g","raw":"30 g","household":"4–5 cucharadas rasas","replacements":["2 rebanadas de pan integral","150 g de mandioca cocida"],"note":"No hace falta agregar otro carbohidrato si también lleva banana."},"time":"5–10 min"},{"label":"🌙 Cena","name":"Omelette de queso y tomate","ingredients":["3 huevos","30 g de queso","1/2 tomate picado","sal"],"steps":["Batir los huevos con sal.","Cocinar en sartén, agregar queso y tomate, doblar y cocinar 3 min más."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]},{"day":"Día 12","meals":[{"label":"🌅 Desayuno","name":"Yogur con manzana y canela","ingredients":["200 g de yogur griego","1 manzana picada","canela"],"steps":["Mezclar todo. Sin cocción."],"carb":{"title":"Fruta","amount":"1 porción","raw":"—","household":"1 banana o 1 manzana o ½ taza de frutos rojos","replacements":["1 naranja grande","2 mandarinas"],"note":"La fruta es el carbohidrato principal de esta merienda o desayuno."},"time":"5–10 min"},{"label":"🍽️ Almuerzo","name":"Pollo al horno con papa y ensalada","ingredients":["180 g de pollo","250 g de papa cocida","ensalada","sal","aceite de oliva"],"steps":["Colocar el pollo y la papa en cubos en una bandeja, condimentar y hornear a 200°C durante 30–35 min.","Comprobar que la papa esté tierna y servir junto con la ensalada."],"carb":{"title":"Papa","amount":"250 g cocida","raw":"280–300 g antes de cocinar","household":"1 papa grande o 2 pequeñas","replacements":["180 g de batata cocida","150–180 g de mandioca cocida"],"note":"La papa es la opción principal. Elegí una sola fuente de carbohidrato y no sumes los reemplazos."},"time":"25–30 min"},{"label":"🏃 Merienda pre-entreno","name":"Tostada con miel","ingredients":["1 rebanada de pan integral","1 cdita de miel"],"steps":["Tostar y rociar con miel. Listo."],"carb":{"title":"Pan integral","amount":"1 rebanada","raw":"30–35 g por rebanada","household":"1 rebanada","replacements":["40 g de avena","150 g de mandioca cocida"],"note":"Elegí una sola fuente de carbohidrato en esta comida."},"time":"5–10 min"},{"label":"🌙 Cena","name":"Carne picada simple con vegetales","ingredients":["150 g de carne picada magra","1 taza de vegetales mixtos","sal"],"steps":["Cocinar la carne en sartén desmenuzando 5-6 min.","Agregar los vegetales y cocinar 4 min más."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]},{"day":"Día 13","meals":[{"label":"🌅 Desayuno","name":"Revuelto de huevo con tomate","ingredients":["3 huevos","1/2 tomate picado","sal","1 rebanada de pan integral"],"steps":["Batir los huevos, agregar el tomate.","Cocinar revolviendo 3-4 min. Servir con la tostada."],"carb":{"title":"Pan integral","amount":"1 rebanada","raw":"30–35 g por rebanada","household":"1 rebanada","replacements":["40 g de avena","150 g de mandioca cocida"],"note":"Elegí una sola fuente de carbohidrato en esta comida."},"time":"12–20 min"},{"label":"🍽️ Almuerzo","name":"Bife con papa y vegetales salteados","ingredients":["180 g de bife magro","250 g de papa cocida en cubos","1 taza de vegetales mixtos","sal"],"steps":["Cocinar el bife en sartén 4-5 min por lado.","Hervir la papa en cubos 12–15 min. Saltear los vegetales 5 min en la misma sartén del bife.","Servir con la papa cocida."],"carb":{"title":"Papa","amount":"250 g cocida","raw":"280–300 g antes de cocinar","household":"1 papa grande o 2 pequeñas","replacements":["180 g de batata cocida","150–180 g de mandioca cocida"],"note":"La papa es la opción principal. Elegí una sola fuente de carbohidrato y no sumes los reemplazos."},"time":"12–20 min"},{"label":"🏃 Merienda pre-entreno","name":"Batido de banana y proteína","ingredients":["1 scoop de proteína (o yogur griego)","1 banana","200 ml de agua o leche"],"steps":["Licuar todo. Listo."],"carb":{"title":"Fruta","amount":"1 porción","raw":"—","household":"1 banana o 1 manzana o ½ taza de frutos rojos","replacements":["1 naranja grande","2 mandarinas"],"note":"La fruta es el carbohidrato principal de esta merienda o desayuno."},"time":"5–10 min"},{"label":"🌙 Cena","name":"Ensalada de pollo con huevo","ingredients":["150 g de pollo cocido (sobras)","1 huevo duro","hojas verdes","tomate","aceite de oliva"],"steps":["Cortar el pollo y el huevo duro.","Mezclar con las hojas verdes y tomate, aliñar con aceite."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]},{"day":"Día 14","meals":[{"label":"🌅 Desayuno","name":"Avena con banana y mantequilla de maní","ingredients":["40 g de avena","200 ml de leche descremada","1/2 banana","1 cda de mantequilla de maní"],"steps":["Calentar la avena con la leche 2-3 min.","Agregar la banana y la mantequilla de maní encima."],"carb":{"title":"Avena","amount":"40 g","raw":"40 g","household":"4–5 cucharadas rasas","replacements":["2 rebanadas de pan integral","150 g de mandioca cocida"],"note":"No hace falta agregar otro carbohidrato si también lleva banana."},"time":"12–20 min"},{"label":"🍽️ Almuerzo","name":"Pollo a la plancha con mandioca","ingredients":["180 g de pechuga de pollo","200 g de mandioca (precocida)","ensalada","sal"],"steps":["Calentar la mandioca 5 min.","Cocinar el pollo en sartén 5-6 min por lado.","Servir con la ensalada."],"carb":{"title":"Mandioca","amount":"200 g cocida","raw":"230–250 g en crudo","household":"≈ 2 trozos medianos","replacements":["250 g de papa cocida","180 g de batata cocida"],"note":"Elegí una sola fuente de carbohidrato en esta comida."},"time":"12–20 min"},{"label":"🏃 Merienda pre-entreno","name":"Yogur con frutos rojos","ingredients":["200 g de yogur griego","1/2 taza de frutos rojos","1 cdita de miel"],"steps":["Mezclar todo. Listo."],"carb":{"title":"Fruta","amount":"1 porción","raw":"—","household":"1 banana o 1 manzana o ½ taza de frutos rojos","replacements":["1 naranja grande","2 mandarinas"],"note":"La fruta es el carbohidrato principal de esta merienda o desayuno."},"time":"5–10 min"},{"label":"🌙 Cena","name":"Huevos revueltos con jamón y queso","ingredients":["3 huevos","40 g de jamón en cubos","20 g de queso","sal"],"steps":["Saltear el jamón 1 min.","Agregar los huevos batidos y el queso, revolver 3-4 min."],"carb":{"title":"Sin carbohidrato adicional obligatorio","amount":"—","raw":"—","household":"Verduras libres","replacements":["Si entrenaste fuerte: 180 g de papa cocida","o 150 g de batata cocida"],"note":"En cenas tardías, agregalo solo si tenés hambre real o entrenaste con intensidad."},"time":"12–20 min"}]}];
 const list={Proteínas:['Pechuga de pollo · 2–3 kg','Carne magra · 1–1,5 kg','Carne molida magra · 500–800 g','Huevos · 24–30 unidades','Yogur natural · 7 unidades','Queso magro · 300–400 g'],Carbohidratos:['Papa · 4–5 kg','Avena · 500 g','Batata · 1 kg','Mandioca · 1 kg','Pan integral · 1 paquete'],Verduras:['Lechuga · 2 unidades','Tomate · 1,5 kg','Cebolla · 1 kg','Zanahoria · 1 kg','Morrón · 4 unidades','Repollo · 1 unidad','Espinaca · 2 atados'],Frutas:['Banana · 10–14 unidades','Manzana · 7 unidades','Naranja o mandarina · 7 unidades'],Otros:['Maní sin sal · 300 g','Aceite · usar 1 cucharadita por comida','Limón · 6 unidades','Ajo · 2 cabezas','Orégano','Pimentón','Canela','Creatina · 5 g diarios']};
-let db=JSON.parse(localStorage.getItem('mtDB')||'{"progress":[],"workouts":{},"shopping":{},"photos":[]}'),gymDay=0,mealIdx=0,tsec=60,tint=null,calDate=new Date();
+let db=JSON.parse(localStorage.getItem('mtDB')||'{"progress":[],"workouts":{},"shopping":{},"photos":[],"foodLog":[]}'),gymDay=0,mealIdx=0,tsec=60,tint=null,calDate=new Date();
+if(!Array.isArray(db.foodLog))db.foodLog=[];
 const save=()=>localStorage.setItem('mtDB',JSON.stringify(db));
-function showPage(id){const target=document.getElementById(id);if(!target){console.error('Página no encontrada:',id);return;}document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));target.classList.add('active');document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('active',x.dataset.p===id));const selector=document.getElementById('pageSelect');if(selector)selector.value=id;if(id==='progress')renderProgress();if(id==='history'){renderCal();renderHistory();renderStrengthProgress();}if(id==='photos')renderPhotos();window.scrollTo({top:0,behavior:'smooth'});}document.querySelectorAll('.nav[data-p]').forEach(btn=>btn.addEventListener('click',function(e){e.preventDefault();showPage(this.dataset.p);}));const pageSelector=document.getElementById('pageSelect');if(pageSelector)pageSelector.addEventListener('change',e=>showPage(e.target.value));
+let uiState=JSON.parse(localStorage.getItem('mtUI')||'{"page":"home","scroll":{},"gymDay":0,"mealIdx":0}');
+gymDay=Number.isInteger(uiState.gymDay)?uiState.gymDay:0;
+mealIdx=Number.isInteger(uiState.mealIdx)?uiState.mealIdx:0;
+function saveUI(){uiState.gymDay=gymDay;uiState.mealIdx=mealIdx;localStorage.setItem('mtUI',JSON.stringify(uiState));}
+function currentPageId(){return document.querySelector('.page.active')?.id||'home'}
+function rememberCurrentPosition(){const p=currentPageId();uiState.page=p;uiState.scroll[p]=window.scrollY||0;saveUI()}
+function showPage(id,restore=true){const target=document.getElementById(id);if(!target){console.error('Página no encontrada:',id);return;}rememberCurrentPosition();document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));target.classList.add('active');document.querySelectorAll('.nav').forEach(x=>x.classList.toggle('active',x.dataset.p===id));const selector=document.getElementById('pageSelect');if(selector)selector.value=id;uiState.page=id;saveUI();if(id==='progress')renderProgress();if(id==='history'){renderCal();renderHistory();renderStrengthProgress();}if(id==='food'){renderMeals();renderFoodHistory();}if(id==='photos')renderPhotos();requestAnimationFrame(()=>window.scrollTo({top:restore?(uiState.scroll[id]||0):0,behavior:'auto'}));}document.querySelectorAll('.nav[data-p]').forEach(btn=>btn.addEventListener('click',function(e){e.preventDefault();showPage(this.dataset.p);}));const pageSelector=document.getElementById('pageSelect');if(pageSelector)pageSelector.addEventListener('change',e=>showPage(e.target.value));
 window.page=showPage;
+window.addEventListener('pagehide',rememberCurrentPosition);document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')rememberCurrentPosition()});
 const checks=[...document.querySelectorAll('#daily input')];
 let dkey='';
 
@@ -977,7 +1406,7 @@ function scheduleDailyReset(){
   next.setHours(6,0,0,0);
   if(now>=next) next.setDate(next.getDate()+1);
   setTimeout(()=>{
-    loadDailyState();
+    loadDailyState();renderMeals();renderFoodHistory();
     scheduleDailyReset();
   },Math.max(1000,next.getTime()-now.getTime()+500));
 }
@@ -1047,28 +1476,259 @@ function renderStrengthProgress(){
 function drawStrengthChart(data){
   const c=document.getElementById('strengthChart');if(!c)return;
   const g=c.getContext('2d'),W=c.width,H=c.height,p=48;
-  g.clearRect(0,0,W,H);g.fillStyle='#fff';g.fillRect(0,0,W,H);
+  g.clearRect(0,0,W,H);g.fillStyle='#0d1310';g.fillRect(0,0,W,H);
   if(!data.length){g.fillStyle='#66716a';g.font='15px Arial';g.fillText('Tus cargas aparecerán aquí cuando empieces a registrarlas.',24,42);return}
   const vals=data.map(x=>x.weight),mn=Math.min(...vals),mx=Math.max(...vals),pad=Math.max(2,(mx-mn)*.2),lo=Math.max(0,mn-pad),hi=mx+pad,range=hi-lo||1;
-  g.strokeStyle='#e2e8e4';g.lineWidth=1;
+  g.strokeStyle='#26332a';g.lineWidth=1;
   for(let i=0;i<5;i++){let y=p+i*(H-p*2)/4;g.beginPath();g.moveTo(p,y);g.lineTo(W-p,y);g.stroke()}
-  g.strokeStyle='#1f6b4f';g.lineWidth=3;g.beginPath();
+  g.strokeStyle='#54d394';g.lineWidth=3;g.beginPath();
   data.forEach((d,i)=>{let x=p+(data.length===1?(W-p*2)/2:i*(W-p*2)/(data.length-1)),y=p+(hi-d.weight)/range*(H-p*2);i?g.lineTo(x,y):g.moveTo(x,y)});g.stroke();
-  data.forEach((d,i)=>{let x=p+(data.length===1?(W-p*2)/2:i*(W-p*2)/(data.length-1)),y=p+(hi-d.weight)/range*(H-p*2);g.fillStyle='#d26f49';g.beginPath();g.arc(x,y,5,0,Math.PI*2);g.fill();g.fillStyle='#17211b';g.font='12px Arial';g.fillText((Math.round(d.weight*10)/10)+' kg',Math.max(4,x-18),Math.max(14,y-10))});
+  data.forEach((d,i)=>{let x=p+(data.length===1?(W-p*2)/2:i*(W-p*2)/(data.length-1)),y=p+(hi-d.weight)/range*(H-p*2);g.fillStyle='#e17a52';g.beginPath();g.arc(x,y,5,0,Math.PI*2);g.fill();g.fillStyle='#dbe8df';g.font='12px Arial';g.fillText((Math.round(d.weight*10)/10)+' kg',Math.max(4,x-18),Math.max(14,y-10))});
 }
 
 function renderGym(){gymtabs.innerHTML=workouts.map((w,i)=>`<button class="tab ${i===gymDay?'active':''}" onclick="gymDay=${i};renderGym()">${w.day}</button>`).join('');let w=workouts[gymDay],k=new Date().toISOString().slice(0,10)+'-'+gymDay,l=db.workouts[k]||{sets:{},weights:{},notes:{},done:false};gymcontent.innerHTML=`<div class="card"><span class="badge">${w.day}</span><h2>${w.title}</h2><h3>Calentamiento</h3>${w.warm.map(x=>`<p>🏃 ${x}</p>`).join('')}</div><div class="card" style="margin-top:12px"><h3>Ejercicios</h3>${w.ex.map((e,i)=>exHTML(e,i,l)).join('')}</div><div class="card" style="margin-top:12px"><h3>Cardio final</h3><p>${w.cardio}</p></div><div class="actions" style="margin-top:12px"><button class="btn" onclick="finishWorkout()">${l.done?'✓ Día completado':'Marcar entrenamiento completado'}</button></div>`}
-function exHTML(e,i,l){let n=parseInt(e[1])||3,done=l.sets[i]||[],prev=previousExerciseWeight(gymDay,i);return `<div class="exercise"><div class="head" onclick="this.parentElement.classList.toggle('open')"><div><b>${e[0]}</b>${e[4]?`<div><span class="badge" style="margin-top:5px">${e[4]}</span></div>`:''}<div class="muted" style="margin-top:5px">${e[1]} · ${e[2]} · descanso ${e[3]}</div>${prev!==null?`<div class="load-hint">Última carga registrada: <strong>${formatKg(prev)}</strong>. Usala como referencia para tu progresión.</div>`:''}</div><span>⌄</span></div><div class="body"><div class="sets">${Array.from({length:n},(_,s)=>`<button class="set ${done[s]?'done':''}" onclick="toggleSet(${i},${s},this)">Serie ${s+1}</button>`).join('')}</div><div class="fields" style="margin-top:11px"><div><label>Peso usado hoy (kg)</label><input inputmode="decimal" placeholder="${prev!==null?prev:'Ej.: 25'}" value="${l.weights[i]||''}" onchange="saveEx(${i},'weights',this.value)"></div><div><label>Notas</label><input value="${l.notes[i]||''}" onchange="saveEx(${i},'notes',this.value)"></div><div><label>Técnica</label><a class="btn alt" target="_blank" href="https://www.youtube.com/results?search_query=${encodeURIComponent('técnica correcta '+e[0])}">Ver video</a></div></div></div></div>`}
+
+
+const curatedExerciseVideos={
+  "Press banca plano con barra":{id:"KCEDjrj2JZg",source:"Emilio Guadix · técnica de press banca"},
+  "Press inclinado con mancuernas":{id:"5_lM3tG6BV0",source:"Demostración de press con mancuernas"},
+  "Remo con barra":{id:"5Gg2OPlCkuE",source:"APTA Vital Sport · técnica de remo con barra"},
+  "Sentadilla libre o multipower":{id:"cas_1IHIG0c",source:"Academia Entrenadores Online · sentadilla con barra"},
+  "Prensa de piernas":{id:"WvLsUYH8v5g",source:"Ramona Gorraiz · técnica de prensa de piernas"},
+  "Curl femoral sentado o acostado":{id:"XYxenn8OOUE",source:"Nutrigasport · curl femoral sentado"},
+  "Patada de glúteo en polea o máquina":{id:"LSbQBbcUyH0",source:"Malagaentrena · técnica de glúteos en polea"},
+  "Press militar":{id:"j_Buh54Sb-w",source:"PowerExplosive · técnica de press militar"},
+  "Elevaciones laterales":{id:"b6KtNTSHA54",source:"Sergio M. Coach · técnica de elevaciones laterales"},
+  "Remo con mancuerna":{id:"gjhF00IP3Sc",source:"RUTINAS GYM · remo con mancuerna"},
+  "Sentadilla frontal":{id:"v_nvYjpX-iY",source:"HSN / PowerExplosive · sentadilla frontal"},
+  "Tríceps en polea":{id:"FA8TyV_eF8M",source:"Doble GYM · técnica de tríceps en polea"},
+  "Extensión de tríceps en polea":{id:"FA8TyV_eF8M",source:"Doble GYM · técnica de tríceps en polea"},
+  "Crunch":{id:"fRmTH1w3vzg",source:"Ramirez Fitness · crunch abdominal"},
+  "Plancha lateral":{id:"kyOeSuh7LLo",source:"Vitar Club · técnica de plancha lateral"}
+};
+
+const professionalExerciseGuide={
+  "Press banca plano con barra":[
+    ["Setup","Pies firmes, glúteos y espalda alta apoyados. Retraé y deprimí las escápulas antes de sacar la barra."],
+    ["Descenso","Bajá la barra controlada hacia la zona media-baja del pecho manteniendo antebrazos casi verticales."],
+    ["Empuje","Empujá hacia arriba y levemente hacia atrás sin perder la posición escapular."],
+    ["Control","No rebotes la barra ni sacrifiques recorrido por aumentar carga."]
+  ],
+  "Press inclinado con mancuernas":[
+    ["Banco","Usá una inclinación moderada, aproximadamente 30–45°."],
+    ["Inicio","Mancuernas a los lados del pecho superior, muñecas neutras y escápulas estables."],
+    ["Empuje","Subí las mancuernas manteniendo una trayectoria natural; no hace falta chocarlas arriba."],
+    ["Descenso","Bajá lento hasta un rango cómodo sin abrir los codos a 90°."]
+  ],
+  "Remo con barra":[
+    ["Bisagra","Inclinate desde la cadera con columna neutra y abdomen activo."],
+    ["Tracción","Llevá la barra hacia el abdomen, guiando con los codos."],
+    ["Pausa","Contraé espalda arriba sin extender exageradamente la columna."],
+    ["Regreso","Extendé brazos con control manteniendo el torso estable."]
+  ],
+  "Sentadilla libre o multipower":[
+    ["Base","Pies estables, puntas ligeramente hacia afuera y core activado."],
+    ["Bajada","Flexioná cadera y rodillas a la vez, siguiendo la dirección de los pies."],
+    ["Profundidad","Bajá hasta donde mantengas pelvis y columna controladas."],
+    ["Subida","Empujá el piso con todo el pie y evitá que las rodillas colapsen hacia dentro."]
+  ],
+  "Prensa de piernas":[
+    ["Ajuste","Espalda y pelvis apoyadas en el respaldo durante todo el recorrido."],
+    ["Pies","Colocalos aproximadamente al ancho de hombros y mantené talones apoyados."],
+    ["Descenso","Bajá hasta un rango que no despegue la pelvis del asiento."],
+    ["Empuje","Extendé sin bloquear agresivamente las rodillas."]
+  ],
+  "Curl femoral sentado o acostado":[
+    ["Ajuste","Alineá la rodilla con el eje de giro de la máquina."],
+    ["Fijación","Mantené cadera y torso apoyados para evitar compensaciones."],
+    ["Flexión","Flexioná la rodilla contrayendo isquiotibiales y sostené brevemente."],
+    ["Excéntrica","Volvé lento; no dejes que la carga te arrastre."]
+  ],
+  "Patada de glúteo en polea o máquina":[
+    ["Posición","Core activo y pelvis estable; sujetate para evitar balanceo."],
+    ["Movimiento","Extendé la cadera llevando la pierna atrás, no la zona lumbar."],
+    ["Contracción","Pausa brevemente cuando el glúteo esté contraído."],
+    ["Regreso","Volvé con control sin dejar que la pesa golpee."]
+  ],
+  "Press militar":[
+    ["Base","Pies firmes, glúteos y abdomen contraídos."],
+    ["Trayectoria","Empujá la carga verticalmente manteniéndola cerca de la línea media."],
+    ["Bloqueo","Terminá con brazos arriba sin hiperextender la zona lumbar."],
+    ["Descenso","Bajá controlado hasta una posición cómoda de hombro."]
+  ],
+  "Elevaciones laterales":[
+    ["Inicio","Mancuernas a los lados, codos levemente flexionados."],
+    ["Elevación","Subí guiando con los codos hasta aproximadamente la línea de hombros."],
+    ["Control","Evitá encoger trapecios o balancear el torso."],
+    ["Descenso","Bajá lento manteniendo tensión en deltoides."]
+  ],
+  "Remo con mancuerna":[
+    ["Soporte","Estabilizá tronco y columna antes de mover la mancuerna."],
+    ["Tracción","Llevá el codo hacia la cadera, no hacia el techo."],
+    ["Escápula","Permití movimiento escapular controlado sin girar excesivamente el torso."],
+    ["Regreso","Bajá la mancuerna con control hasta extender el brazo."]
+  ],
+  "Sentadilla frontal":[
+    ["Rack","Mantené la barra apoyada delante y los codos altos."],
+    ["Torso","Buscá una posición más vertical que en la sentadilla trasera."],
+    ["Bajada","Rodillas siguen pies y talones permanecen apoyados."],
+    ["Subida","Empujá el piso sin dejar caer los codos."]
+  ],
+  "Tríceps en polea":[
+    ["Posición","Codos pegados al cuerpo y hombros relajados."],
+    ["Extensión","Extendé los codos sin mover el hombro hacia delante."],
+    ["Final","Terminá con contracción de tríceps, sin bloquear violentamente."],
+    ["Regreso","Subí la carga lento manteniendo codos en su sitio."]
+  ],
+  "Extensión de tríceps en polea":[
+    ["Posición","Codos pegados al cuerpo y torso estable."],
+    ["Extensión","Empujá hacia abajo hasta extender los codos."],
+    ["Control","No uses balanceo ni hombros para mover la carga."],
+    ["Regreso","Volvé de forma controlada."]
+  ],
+  "Crunch":[
+    ["Inicio","Lumbar estable y cuello relajado."],
+    ["Flexión","Acercá costillas hacia pelvis, elevando hombros del suelo."],
+    ["Respiración","Exhalá durante la contracción."],
+    ["Regreso","Bajá controlado sin tirar del cuello."]
+  ],
+  "Plancha lateral":[
+    ["Apoyo","Codo debajo del hombro."],
+    ["Alineación","Cabeza, tronco y piernas forman una línea."],
+    ["Cadera","Mantenela elevada sin rotar el torso."],
+    ["Respiración","Respirá de forma continua mientras sostenés tensión."]
+  ]
+};
+
+function guideForExercise(name){
+  return professionalExerciseGuide[name] || [
+    ["Preparación","Ajustá el equipo y la postura antes de iniciar la serie."],
+    ["Ejecución","Realizá el recorrido de forma lenta y controlada."],
+    ["Tensión","Mantené el grupo muscular objetivo bajo tensión sin compensaciones."],
+    ["Progresión","Aumentá la carga solo cuando puedas repetir la técnica de forma consistente."]
+  ];
+}
+
+const exerciseDemoMeta={
+  "Press banca plano con barra":{type:"press",focus:"Pecho · tríceps · deltoide anterior",breath:"Inhalá al bajar · exhalá al empujar",tempo:"2 s bajar · 1 s subir",cues:["Escápulas atrás y abajo","Pies firmes en el piso","Barra hacia la zona media del pecho"],errors:["Rebotar la barra","Abrir demasiado los codos","Despegar glúteos del banco"]},
+  "Press inclinado con mancuernas":{type:"press",focus:"Pecho superior · hombros · tríceps",breath:"Inhalá al bajar · exhalá al subir",tempo:"2–3 s bajar · subir controlado",cues:["Banco con inclinación moderada","Muñecas neutras","Mancuernas bajan a los lados del pecho"],errors:["Chocar mancuernas arriba","Arquear demasiado la espalda","Bajar sin control"]},
+  "Remo con barra":{type:"row",focus:"Dorsal · romboides · bíceps",breath:"Exhalá al remar · inhalá al extender",tempo:"1 s tirar · 2 s volver",cues:["Torso firme","Barra hacia abdomen","Codos cerca del cuerpo"],errors:["Balancear el torso","Redondear espalda","Tirar solo con brazos"]},
+  "Jalón al pecho":{type:"pull",focus:"Dorsal · bíceps · espalda alta",breath:"Exhalá al bajar · inhalá al subir",tempo:"1 s bajar · 2 s subir",cues:["Pecho arriba","Llevá la barra hacia clavícula/pecho alto","Controlá la subida"],errors:["Llevar la barra detrás de la cabeza","Balancearse","Soltar el peso arriba"]},
+  "Curl de bíceps":{type:"curl",focus:"Bíceps · braquial",breath:"Exhalá al flexionar · inhalá al bajar",tempo:"1 s subir · 2–3 s bajar",cues:["Codos pegados al torso","Muñeca neutra","Recorrido controlado"],errors:["Impulsarse con la espalda","Mover los codos hacia adelante","Caer rápido al bajar"]},
+  "Extensión de tríceps en polea":{type:"pull",focus:"Tríceps",breath:"Exhalá al extender · inhalá al volver",tempo:"1 s bajar · 2 s volver",cues:["Codos fijos","Extensión completa sin bloquear agresivamente","Torso estable"],errors:["Abrir codos","Usar hombros","Balancearse"]},
+  "Sentadilla libre o multipower":{type:"squat",focus:"Cuádriceps · glúteos · core",breath:"Inhalá y braceá antes de bajar · exhalá al subir",tempo:"2–3 s bajar · 1 s subir",cues:["Rodillas siguen dirección de pies","Pecho estable","Peso repartido en todo el pie"],errors:["Rodillas colapsan hacia dentro","Talones se levantan","Perder tensión del core"]},
+  "Prensa de piernas":{type:"leg",focus:"Cuádriceps · glúteos",breath:"Inhalá al bajar · exhalá al empujar",tempo:"2 s bajar · 1 s empujar",cues:["Espalda y pelvis apoyadas","Rodillas alineadas","No bloquear rodillas arriba"],errors:["Bajar demasiado y despegar cadera","Cerrar rodillas","Rebotar abajo"]},
+  "Curl femoral sentado o acostado":{type:"leg",focus:"Isquiotibiales",breath:"Exhalá al flexionar · inhalá al volver",tempo:"1 s flexionar · 2 s extender",cues:["Cadera estable","Apretá femoral al final","Volvé lento"],errors:["Levantar cadera","Usar impulso","Soltar el peso"]},
+  "Patada de glúteo en polea o máquina":{type:"leg",focus:"Glúteo mayor",breath:"Exhalá al extender · inhalá al volver",tempo:"1 s atrás · 2 s volver",cues:["Pelvis estable","Movimiento desde la cadera","Apretá glúteo arriba"],errors:["Arquear espalda","Girar la pelvis","Buscar demasiado recorrido"]},
+  "Abducción en máquina":{type:"leg",focus:"Glúteo medio",breath:"Exhalá al abrir · inhalá al cerrar",tempo:"1 s abrir · 2 s cerrar",cues:["Torso estable","Abrí desde la cadera","Controlá el regreso"],errors:["Rebotar","Cerrar de golpe","Compensar con torso"]},
+  "Elevación de gemelos en máquina":{type:"calf",focus:"Gemelos · sóleo",breath:"Exhalá al subir · inhalá al bajar",tempo:"1 s subir · 2 s bajar",cues:["Subí sobre metatarsos","Pausa arriba","Bajá hasta estirar"],errors:["Rebotar","Recorrido corto","Doblar demasiado rodillas"]},
+  "Press militar":{type:"press",focus:"Hombros · tríceps",breath:"Exhalá al empujar · inhalá al bajar",tempo:"1 s subir · 2 s bajar",cues:["Core firme","Barra/mancuernas sobre línea media","Cabeza vuelve bajo la carga"],errors:["Arquear lumbar","Empujar hacia adelante","Bajar demasiado rápido"]},
+  "Elevaciones laterales":{type:"curl",focus:"Deltoide lateral",breath:"Exhalá al elevar · inhalá al bajar",tempo:"1–2 s subir · 2 s bajar",cues:["Codos levemente flexionados","Subí hasta línea de hombros","Control total"],errors:["Encoger hombros","Usar impulso","Subir demasiado alto"]},
+  "Remo con mancuerna":{type:"row",focus:"Dorsal · espalda alta · bíceps",breath:"Exhalá al tirar · inhalá al bajar",tempo:"1 s tirar · 2 s bajar",cues:["Columna neutra","Codo hacia la cadera","Hombro lejos de oreja"],errors:["Girar el torso","Tirar hacia el pecho","Encoger hombro"]},
+  "Sentadilla frontal":{type:"squat",focus:"Cuádriceps · glúteos · core",breath:"Braceá antes de bajar · exhalá al subir",tempo:"2–3 s bajar · subir firme",cues:["Codos altos","Torso más vertical","Rodillas siguen pies"],errors:["Codos caen","Talones se despegan","Redondear tronco"]},
+  "Curl martillo":{type:"curl",focus:"Braquial · bíceps · antebrazo",breath:"Exhalá al subir · inhalá al bajar",tempo:"1 s subir · 2 s bajar",cues:["Palmas enfrentadas","Codos quietos","Subí sin balanceo"],errors:["Mover hombros","Tomar impulso","Bajar de golpe"]},
+  "Tríceps en polea":{type:"pull",focus:"Tríceps",breath:"Exhalá al extender · inhalá al volver",tempo:"1 s extender · 2 s volver",cues:["Codos fijos","Hombros relajados","Extensión controlada"],errors:["Abrir codos","Inclinarse demasiado","Usar todo el torso"]},
+  "Plancha frontal":{type:"core",focus:"Core · estabilidad",breath:"Respirá corto y controlado",tempo:"Isométrico",cues:["Cuerpo en línea","Glúteos activos","Costillas hacia abajo"],errors:["Cadera cae","Cadera demasiado alta","Aguantar la respiración"]},
+  "Crunch":{type:"core",focus:"Recto abdominal",breath:"Exhalá al subir · inhalá al bajar",tempo:"1 s subir · 2 s bajar",cues:["Acercá costillas a pelvis","Cuello relajado","Recorrido corto"],errors:["Tirar del cuello","Sentarse por completo","Usar impulso"]},
+  "Plancha lateral":{type:"core",focus:"Oblicuos · estabilidad lateral",breath:"Respiración continua",tempo:"Isométrico",cues:["Cadera elevada","Hombro sobre codo","Cuerpo alineado"],errors:["Cadera cae","Rotar el pecho","Cargar cuello"]},
+  "Plancha con toque de hombros":{type:"core",focus:"Core · hombros · anti-rotación",breath:"Respiración continua",tempo:"Toques lentos",cues:["Pies algo separados","Pelvis quieta","Toque suave"],errors:["Balancear cadera","Apurarse","Arquear lumbar"]},
+  "Elevaciones de piernas":{type:"core",focus:"Abdominal inferior · flexores de cadera",breath:"Exhalá al elevar · inhalá al bajar",tempo:"1 s subir · 2 s bajar",cues:["Lumbar controlada","Piernas juntas","Bajá solo hasta mantener control"],errors:["Arquear espalda","Balancear piernas","Bajar demasiado"]},
+  "Russian Twist con peso":{type:"core",focus:"Oblicuos · core",breath:"Respiración continua",tempo:"Giro controlado",cues:["Pecho abierto","Girá caja torácica","Movimiento controlado"],errors:["Mover solo brazos","Colapsar espalda","Ir demasiado rápido"]},
+  "Crunch con piernas elevadas":{type:"core",focus:"Recto abdominal",breath:"Exhalá al subir · inhalá al bajar",tempo:"1 s subir · 2 s bajar",cues:["Piernas estables","Costillas hacia pelvis","Cuello suelto"],errors:["Tirar cuello","Balancear piernas","Subir demasiado"]},
+  "Plancha estrecha":{type:"core",focus:"Core · tríceps",breath:"Respiración continua",tempo:"Isométrico",cues:["Codos cerca del cuerpo","Core firme","Cuerpo alineado"],errors:["Abrir codos","Cadera cae","Hombros colapsan"]}
+};
+function inferDemoMeta(name){
+  const n=name.toLowerCase();
+  let type=n.includes('sentadilla')?'squat':n.includes('curl')?'curl':n.includes('remo')?'row':n.includes('jalón')||n.includes('polea')?'pull':n.includes('prensa')||n.includes('pierna')||n.includes('glúteo')||n.includes('abdu')?'leg':n.includes('plancha')||n.includes('crunch')||n.includes('russian')?'core':n.includes('gemelo')?'calf':'press';
+  return {type,focus:"Movimiento principal",breath:"Respirá de forma controlada",tempo:"Recorrido controlado",cues:["Mantené una postura estable","Usá un rango cómodo y controlado","Priorizá técnica antes que peso"],errors:["Usar impulso excesivo","Perder control del recorrido","Subir peso sacrificando técnica"]};
+}
+function demoSVG(type){
+  const base=`<svg viewBox="0 0 520 360" aria-label="Demostración animada">
+    <line x1="55" y1="310" x2="465" y2="310" class="svg-floor"/>
+    <circle cx="260" cy="92" r="24" class="svg-joint"/>
+    <line x1="260" y1="118" x2="260" y2="205" class="svg-skin"/>
+    <line x1="260" y1="150" x2="205" y2="195" class="svg-skin"/>
+    <line x1="260" y1="150" x2="315" y2="195" class="svg-skin"/>
+    <line x1="260" y1="205" x2="220" y2="285" class="svg-skin"/>
+    <line x1="260" y1="205" x2="300" y2="285" class="svg-skin"/>`;
+  if(type==='press')return base+`<g class="moving"><line x1="190" y1="120" x2="330" y2="120" class="svg-equip"/><line x1="205" y1="195" x2="220" y2="120" class="svg-skin"/><line x1="315" y1="195" x2="300" y2="120" class="svg-skin"/></g><path d="M350 165 L350 105" class="svg-arrow"/><path d="M342 114 L350 104 L358 114" class="svg-arrow"/></svg>`;
+  if(type==='squat')return `<svg viewBox="0 0 520 360"><line x1="55" y1="310" x2="465" y2="310" class="svg-floor"/><g class="moving"><circle cx="260" cy="82" r="24" class="svg-joint"/><line x1="260" y1="108" x2="260" y2="188" class="svg-skin"/><line x1="260" y1="135" x2="205" y2="145" class="svg-skin"/><line x1="260" y1="135" x2="315" y2="145" class="svg-skin"/><line x1="260" y1="188" x2="215" y2="240" class="svg-skin"/><line x1="215" y1="240" x2="200" y2="300" class="svg-skin"/><line x1="260" y1="188" x2="305" y2="240" class="svg-skin"/><line x1="305" y1="240" x2="320" y2="300" class="svg-skin"/><line x1="190" y1="128" x2="330" y2="128" class="svg-equip"/></g><path d="M365 125 L365 230" class="svg-arrow"/></svg>`;
+  if(type==='curl')return base+`<g class="moving" style="transform-origin:205px 195px"><line x1="205" y1="195" x2="165" y2="255" class="svg-skin"/><circle cx="158" cy="266" r="12" fill="#62e6a4"/></g><path d="M145 250 Q115 205 155 180" class="svg-arrow"/></svg>`;
+  if(type==='row')return `<svg viewBox="0 0 520 360"><line x1="55" y1="310" x2="465" y2="310" class="svg-floor"/><circle cx="280" cy="95" r="24" class="svg-joint"/><line x1="270" y1="118" x2="220" y2="185" class="svg-skin"/><line x1="220" y1="185" x2="190" y2="285" class="svg-skin"/><line x1="220" y1="185" x2="300" y2="280" class="svg-skin"/><g class="moving"><line x1="250" y1="155" x2="175" y2="205" class="svg-skin"/><line x1="175" y1="205" x2="120" y2="205" class="svg-equip"/></g><path d="M120 165 L195 165" class="svg-arrow"/></svg>`;
+  if(type==='pull')return base+`<line x1="170" y1="55" x2="350" y2="55" class="svg-equip"/><g class="moving"><line x1="205" y1="195" x2="195" y2="95" class="svg-skin"/><line x1="315" y1="195" x2="325" y2="95" class="svg-skin"/><line x1="190" y1="92" x2="330" y2="92" class="svg-equip"/></g><path d="M375 85 L375 175" class="svg-arrow"/></svg>`;
+  if(type==='leg')return `<svg viewBox="0 0 520 360"><line x1="55" y1="310" x2="465" y2="310" class="svg-floor"/><circle cx="200" cy="92" r="24" class="svg-joint"/><line x1="210" y1="115" x2="250" y2="190" class="svg-skin"/><line x1="250" y1="190" x2="205" y2="270" class="svg-skin"/><g class="moving" style="transform-origin:250px 190px"><line x1="250" y1="190" x2="340" y2="250" class="svg-skin"/><circle cx="355" cy="260" r="13" fill="#62e6a4"/></g><path d="M350 225 Q390 190 405 145" class="svg-arrow"/></svg>`;
+  if(type==='calf')return `<svg viewBox="0 0 520 360"><line x1="55" y1="310" x2="465" y2="310" class="svg-floor"/><g class="moving"><circle cx="260" cy="90" r="24" class="svg-joint"/><line x1="260" y1="116" x2="260" y2="205" class="svg-skin"/><line x1="260" y1="205" x2="220" y2="292" class="svg-skin"/><line x1="260" y1="205" x2="300" y2="292" class="svg-skin"/></g><path d="M370 255 L370 180" class="svg-arrow"/></svg>`;
+  return `<svg viewBox="0 0 520 360"><line x1="55" y1="310" x2="465" y2="310" class="svg-floor"/><g class="moving"><circle cx="250" cy="150" r="24" class="svg-joint"/><line x1="275" y1="165" x2="370" y2="185" class="svg-skin"/><line x1="370" y1="185" x2="440" y2="220" class="svg-skin"/><line x1="285" y1="185" x2="245" y2="250" class="svg-skin"/><line x1="245" y1="250" x2="185" y2="300" class="svg-skin"/></g><path d="M300 115 Q260 80 220 110" class="svg-arrow"/></svg>`;
+}
+function openExerciseDemo(dayIdx,exIdx){
+  const e=workouts[dayIdx].ex[exIdx],name=e[0],meta=exerciseDemoMeta[name]||inferDemoMeta(name),h=exerciseHistory(dayIdx,exIdx),last=h.length?h[h.length-1].weight:null,pr=h.length?Math.max(...h.map(x=>x.weight)):null,video=curatedExerciseVideos[name],guide=guideForExercise(name);
+  demoExerciseTitle.textContent=name;
+
+  if(video){
+    demoStage.innerHTML=`<div class="video-stage"><iframe src="https://www.youtube-nocookie.com/embed/${video.id}?rel=0&modestbranding=1&playsinline=1" title="${name}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-source"><span>Video técnico integrado</span><strong>${video.source}</strong></div>`;
+  }else{
+    demoStage.innerHTML=`<div class="no-video"><div><div class="icon">✓</div><h3>Guía técnica validada</h3><p>No asigné un video genérico a este ejercicio porque prefiero no mostrar una demostración que no corresponda exactamente al movimiento. La ficha técnica de la derecha sí está adaptada al ejercicio.</p></div></div>`;
+  }
+
+  demoTechPanel.innerHTML=`
+    <div class="technique-header"><span class="verified">✓ Ficha técnica</span><span class="muted">${meta.focus}</span></div>
+    <div class="demo-metric-grid">
+      <div class="demo-metric"><small>Series / reps</small><b>${e[1]}</b></div>
+      <div class="demo-metric"><small>Carga objetivo</small><b>${e[2]}</b></div>
+      <div class="demo-metric"><small>Última carga</small><b>${formatKg(last)}</b></div>
+      <div class="demo-metric"><small>Récord personal</small><b>${formatKg(pr)}</b></div>
+    </div>
+    <div class="tech-box good"><h3>Ejecución paso a paso</h3><div class="cue-steps">${guide.map((x,i)=>`<div class="cue-step"><span>${i+1}</span><div><b>${x[0]}</b><p>${x[1]}</p></div></div>`).join('')}</div></div>
+    <div class="tech-box"><h3>Respiración y ritmo</h3><ul><li>${meta.breath}</li><li>${meta.tempo}</li><li>Grupo principal: ${meta.focus}</li></ul></div>
+    <div class="tech-box bad"><h3>Errores que quiero que evites</h3><ul>${meta.errors.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+    <div class="professional-note">El video es una referencia visual. Ajustá rango, agarre y configuración de la máquina a tu estructura y al equipo disponible en tu gimnasio.</div>`;
+  exerciseModal.classList.add('open');exerciseModal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+}
+function closeExerciseDemo(){
+  exerciseModal.classList.remove('open');exerciseModal.setAttribute('aria-hidden','true');document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeExerciseDemo()});
+
+function exHTML(e,i,l){let n=parseInt(e[1])||3,done=l.sets[i]||[],prev=previousExerciseWeight(gymDay,i);return `<div class="exercise"><div class="head" onclick="this.parentElement.classList.toggle('open')"><div><div class="exercise-title-row"><span class="exercise-index">${i+1}</span><b>${e[0]}</b></div>${e[4]?`<div class="technique-pills"><span>${e[4]}</span><span>Descanso ${e[3]}</span></div>`:''}<div class="muted" style="margin-top:7px">${e[1]} · ${e[2]}</div>${prev!==null?`<div class="load-hint">Última carga registrada: <strong>${formatKg(prev)}</strong>. Usala como referencia para tu progresión.</div>`:''}</div><span>⌄</span></div><div class="body"><div class="sets">${Array.from({length:n},(_,s)=>`<button class="set ${done[s]?'done':''}" onclick="toggleSet(${i},${s},this)">Serie ${s+1}</button>`).join('')}</div><div class="fields" style="margin-top:11px"><div><label>Peso usado hoy (kg)</label><input inputmode="decimal" placeholder="${prev!==null?prev:'Ej.: 25'}" value="${l.weights[i]||''}" onchange="saveEx(${i},'weights',this.value)"></div><div><label>Notas</label><input value="${l.notes[i]||''}" onchange="saveEx(${i},'notes',this.value)"></div><div><label>Técnica</label><button type="button" class="btn demo-btn" onclick="openExerciseDemo(${gymDay},${i})">Ver demo en la app</button></div></div></div></div>`}
 function log(){let k=new Date().toISOString().slice(0,10)+'-'+gymDay;if(!db.workouts[k])db.workouts[k]={sets:{},weights:{},notes:{},done:false};return db.workouts[k]}function toggleSet(i,s,b){let l=log();if(!l.sets[i])l.sets[i]=[];l.sets[i][s]=!l.sets[i][s];b.classList.toggle('done');save()}function saveEx(i,t,v){log()[t][i]=v;save();if(t==='weights')renderStrengthProgress()}function finishWorkout(){log().done=true;save();renderGym();renderCal();renderSummary();renderHistory()}renderGym();
 function setTimer(s){tsec=s;clearInterval(tint);tint=null;timerBtn.textContent='Iniciar';clock.textContent=String(Math.floor(tsec/60)).padStart(2,'0')+':'+String(tsec%60).padStart(2,'0')}function toggleTimer(){if(tint){clearInterval(tint);tint=null;timerBtn.textContent='Continuar'}else{timerBtn.textContent='Pausar';tint=setInterval(()=>{if(tsec<=0){clearInterval(tint);tint=null;timerBtn.textContent='Iniciar';alert('Descanso terminado');return}tsec--;clock.textContent=String(Math.floor(tsec/60)).padStart(2,'0')+':'+String(tsec%60).padStart(2,'0')},1000)}}
 nutritionPlan.forEach((d,i)=>mealDay.innerHTML+=`<option value="${i}">${d.day}</option>`);
-mealDay.onchange=()=>{mealIdx=+mealDay.value;renderMeals()};
-function moveMeal(d){mealIdx=(mealIdx+d+nutritionPlan.length)%nutritionPlan.length;renderMeals()}
-function randomMeal(){let n;do{n=Math.floor(Math.random()*nutritionPlan.length)}while(n===mealIdx&&nutritionPlan.length>1);mealIdx=n;renderMeals()}
-function mealBlock(m,index){const c=m.carb;return `<article class="meal ${index===0?'open':''}"><div class="head" onclick="this.parentElement.classList.toggle('open')"><div><span class="meal-label">${m.label}</span><b>${m.name}</b><div class="muted meal-meta">⏱ ${m.time} · Toca para ver todos los detalles</div></div><span class="chev">⌄</span></div><div class="body"><div class="recipe-grid"><section><h3>Ingredientes exactos</h3><ul class="ingredient-list">${m.ingredients.map(x=>`<li>${x}</li>`).join('')}</ul></section><section><h3>Preparación paso a paso</h3><ol class="recipe-steps">${m.steps.map(x=>`<li>${x}</li>`).join('')}</ol></section></div><div class="carb-card"><div class="carb-title-row"><div><small>CARBOHIDRATO INDICADO</small><h4>${c.title}</h4></div><strong>${c.amount}</strong></div><div class="carb-grid"><div class="carb-option"><b>Peso antes de cocinar</b><span>${c.raw}</span></div><div class="carb-option"><b>Medida casera</b><span>${c.household}</span></div></div><h4>Reemplazos equivalentes</h4><div class="replacement-grid">${c.replacements.map(x=>`<div>✓ ${x}</div>`).join('')}</div><p class="carb-note">${c.note}</p></div><div class="actions recipe-actions"><a class="btn alt" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=${encodeURIComponent('cómo preparar '+m.name+' saludable')}">▶ Ver preparación</a><a class="btn ghost" target="_blank" rel="noopener" href="https://cookpad.com/py/buscar/${encodeURIComponent(m.name)}">Más opciones de receta</a></div></div></article>`}
+mealDay.onchange=()=>{mealIdx=+mealDay.value;saveUI();renderMeals()};
+function moveMeal(d){mealIdx=(mealIdx+d+nutritionPlan.length)%nutritionPlan.length;saveUI();renderMeals()}
+function randomMeal(){let n;do{n=Math.floor(Math.random()*nutritionPlan.length)}while(n===mealIdx&&nutritionPlan.length>1);mealIdx=n;saveUI();renderMeals()}
+
+function logicalFoodDate(){
+  const now=new Date(),d=new Date(now);
+  if(now.getHours()<6)d.setDate(d.getDate()-1);
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+function foodRecordFor(planIdx,mealIndex,date=logicalFoodDate()){
+  return db.foodLog.find(x=>x.date===date&&x.planIdx===planIdx&&x.mealIndex===mealIndex);
+}
+function toggleFood(planIdx,mealIndex){
+  const date=logicalFoodDate(),existing=foodRecordFor(planIdx,mealIndex,date);
+  if(existing)db.foodLog=db.foodLog.filter(x=>x.id!==existing.id);
+  else{
+    const meal=nutritionPlan[planIdx].meals[mealIndex];
+    db.foodLog.push({id:Date.now(),date,planIdx,mealIndex,label:meal.label,name:meal.name,createdAt:new Date().toISOString()});
+  }
+  save();renderMeals();renderFoodHistory();
+}
+function deleteFood(id){db.foodLog=db.foodLog.filter(x=>x.id!==id);save();renderMeals();renderFoodHistory()}
+function renderFoodHistory(){
+  const rowsEl=document.getElementById('foodRows');if(!rowsEl)return;
+  const today=logicalFoodDate(),todayCount=db.foodLog.filter(x=>x.date===today).length;
+  const now=new Date(today+'T12:00:00'),dates=[];
+  for(let i=0;i<7;i++){let d=new Date(now);d.setDate(d.getDate()-i);dates.push(`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`)}
+  const weekCount=db.foodLog.filter(x=>dates.includes(x.date)).length,weekPct=Math.round(Math.min(1,weekCount/28)*100);
+  foodToday.textContent=`${todayCount} / 4`;foodWeek.textContent=`${weekPct}%`;foodTotal.textContent=db.foodLog.length;
+  rowsEl.innerHTML=db.foodLog.slice().sort((a,b)=>(b.date+(b.createdAt||'')).localeCompare(a.date+(a.createdAt||''))).slice(0,40).map(x=>`<tr><td>${new Date(x.date+'T12:00:00').toLocaleDateString('es-PY')}</td><td>${x.label}</td><td><b>${x.name}</b></td><td>Día ${x.planIdx+1}</td><td><button class="btn danger" onclick="deleteFood(${x.id})">Eliminar</button></td></tr>`).join('')||'<tr><td colspan="5" class="muted">Todavía no registraste comidas. Marcá “Consumida” en una receta y aparecerá acá.</td></tr>';
+}
+
+function mealBlock(m,index){const c=m.carb,consumed=!!foodRecordFor(mealIdx,index);return `<article class="meal ${index===0?'open':''}"><div class="head" onclick="this.parentElement.classList.toggle('open')"><div><span class="meal-label">${m.label}</span><b>${m.name}</b><div class="muted meal-meta">⏱ ${m.time} · ${consumed?'✓ Registrada hoy':'Toca para ver todos los detalles'}</div></div><span class="chev">⌄</span></div><div class="body"><div class="recipe-grid"><section><h3>Ingredientes exactos</h3><ul class="ingredient-list">${m.ingredients.map(x=>`<li>${x}</li>`).join('')}</ul></section><section><h3>Preparación paso a paso</h3><ol class="recipe-steps">${m.steps.map(x=>`<li>${x}</li>`).join('')}</ol></section></div><div class="carb-card"><div class="carb-title-row"><div><small>CARBOHIDRATO INDICADO</small><h4>${c.title}</h4></div><strong>${c.amount}</strong></div><div class="carb-grid"><div class="carb-option"><b>Peso antes de cocinar</b><span>${c.raw}</span></div><div class="carb-option"><b>Medida casera</b><span>${c.household}</span></div></div><h4>Reemplazos equivalentes</h4><div class="replacement-grid">${c.replacements.map(x=>`<div>✓ ${x}</div>`).join('')}</div><p class="carb-note">${c.note}</p></div><div class="actions recipe-actions"><button class="btn ${consumed?'meal-consumed':'alt'}" onclick="toggleFood(${mealIdx},${index})">${consumed?'✓ Consumida hoy':'✓ Marcar como consumida'}</button><a class="btn alt" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=${encodeURIComponent('cómo preparar '+m.name+' saludable')}">▶ Ver preparación</a><a class="btn ghost" target="_blank" rel="noopener" href="https://cookpad.com/py/buscar/${encodeURIComponent(m.name)}">Más recetas</a></div></div></article>`}
 function renderMeals(){mealDay.value=mealIdx;const d=nutritionPlan[mealIdx];mealContent.innerHTML=`<div class="nutrition-day-head"><div><span class="badge">${d.day}</span><h2>Plan nutricional del día</h2><p>Objetivo diario aproximado: 2.200–2.350 kcal · 165–190 g de proteína.</p></div><div class="day-meal-count">4 comidas</div></div><div class="nutrition-alert"><b>Cómo usar este menú:</b> respetá la cantidad indicada del carbohidrato. Los reemplazos son alternativas, no se suman entre sí.</div>${d.meals.map(mealBlock).join('')}<div class="meal-tip"><b>Preparación anticipada:</b> cociná 2–3 porciones de pollo, carne, papa o mandioca y guardalas refrigeradas para reducir el tiempo diario.</div>`}
-renderMeals();
-pd.value=new Date().toISOString().slice(0,10);pf.onsubmit=e=>{e.preventDefault();db.progress.push({id:Date.now(),date:pd.value,weight:+pw.value,waist:+pwa.value||null,chest:+pch.value||null,arm:+parm.value||null,leg:+pleg.value||null,workouts:+pwo.value||0,steps:+psteps.value||0,compliance:+pcomp.value||0,notes:pnotes.value});db.progress.sort((a,b)=>a.date.localeCompare(b.date));save();e.target.reset();pd.value=new Date().toISOString().slice(0,10);renderProgress();renderSummary()};function renderProgress(){rows.innerHTML=db.progress.length?db.progress.map(r=>`<tr><td>${r.date}</td><td>${r.weight.toFixed(1)}</td><td>${r.waist||'-'}</td><td>${r.workouts}</td><td>${r.compliance}%</td><td><button class="btn danger" onclick="delP(${r.id})">X</button></td></tr>`).join(''):'<tr><td colspan="6">Sin registros</td></tr>';chart('wc',db.progress.map(x=>x.weight),'kg');chart('wac',db.progress.filter(x=>x.waist).map(x=>x.waist),'cm')}function delP(id){db.progress=db.progress.filter(x=>x.id!==id);save();renderProgress();renderSummary()}function chart(id,data,unit){let c=document.getElementById(id),g=c.getContext('2d');g.clearRect(0,0,c.width,c.height);g.fillStyle='#fff';g.fillRect(0,0,c.width,c.height);if(!data.length){g.fillStyle='#746b63';g.fillText('Agrega registros para ver el gráfico',25,40);return}let p=42,w=c.width-p*2,h=c.height-p*2,mn=Math.min(...data)-1,mx=Math.max(...data)+1,r=mx-mn||1;g.strokeStyle='#eadfd5';for(let i=0;i<5;i++){let y=p+i*h/4;g.beginPath();g.moveTo(p,y);g.lineTo(p+w,y);g.stroke()}g.strokeStyle='#c97a5a';g.lineWidth=3;g.beginPath();data.forEach((v,i)=>{let x=p+(data.length===1?w/2:i*w/(data.length-1)),y=p+h-(v-mn)/r*h;i?g.lineTo(x,y):g.moveTo(x,y)});g.stroke()}renderProgress();
+renderMeals();renderFoodHistory();
+pd.value=new Date().toISOString().slice(0,10);pf.onsubmit=e=>{e.preventDefault();db.progress.push({id:Date.now(),date:pd.value,weight:+pw.value,waist:+pwa.value||null,chest:+pch.value||null,arm:+parm.value||null,leg:+pleg.value||null,workouts:+pwo.value||0,steps:+psteps.value||0,compliance:+pcomp.value||0,notes:pnotes.value});db.progress.sort((a,b)=>a.date.localeCompare(b.date));save();e.target.reset();pd.value=new Date().toISOString().slice(0,10);renderProgress();renderSummary()};function renderProgress(){rows.innerHTML=db.progress.length?db.progress.map(r=>`<tr><td>${r.date}</td><td>${r.weight.toFixed(1)}</td><td>${r.waist||'-'}</td><td>${r.workouts}</td><td>${r.compliance}%</td><td><button class="btn danger" onclick="delP(${r.id})">X</button></td></tr>`).join(''):'<tr><td colspan="6">Sin registros</td></tr>';chart('wc',db.progress.map(x=>x.weight),'kg');chart('wac',db.progress.filter(x=>x.waist).map(x=>x.waist),'cm')}function delP(id){db.progress=db.progress.filter(x=>x.id!==id);save();renderProgress();renderSummary()}function chart(id,data,unit){let c=document.getElementById(id),g=c.getContext('2d');g.clearRect(0,0,c.width,c.height);g.fillStyle='#0d1310';g.fillRect(0,0,c.width,c.height);if(!data.length){g.fillStyle='#8f9d94';g.fillText('Agrega registros para ver el gráfico',25,40);return}let p=42,w=c.width-p*2,h=c.height-p*2,mn=Math.min(...data)-1,mx=Math.max(...data)+1,r=mx-mn||1;g.strokeStyle='#26332a';for(let i=0;i<5;i++){let y=p+i*h/4;g.beginPath();g.moveTo(p,y);g.lineTo(p+w,y);g.stroke()}g.strokeStyle='#54d394';g.lineWidth=3;g.beginPath();data.forEach((v,i)=>{let x=p+(data.length===1?w/2:i*w/(data.length-1)),y=p+h-(v-mn)/r*h;i?g.lineTo(x,y):g.moveTo(x,y)});g.stroke()}renderProgress();
 function renderSummary(){let last=db.progress.at(-1),done=Object.values(db.workouts).filter(x=>x.done).length;summary.innerHTML=`<div><small class="muted">Peso actual</small><h3>${last?last.weight.toFixed(1)+' kg':'-'}</h3></div><div><small class="muted">Gym completados</small><h3>${done}</h3></div><div><small class="muted">Último cumplimiento</small><h3>${last?last.compliance+'%':'-'}</h3></div>`}renderSummary();
 function renderCal(){let y=calDate.getFullYear(),m=calDate.getMonth(),f=new Date(y,m,1),n=new Date(y,m+1,0).getDate();monthTitle.textContent=f.toLocaleDateString('es-PY',{month:'long',year:'numeric'});let h=['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'].map(x=>`<div class="muted">${x}</div>`).join('');h+=Array((f.getDay()+6)%7).fill('<div></div>').join('');for(let d=1;d<=n;d++){let dt=`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`,done=Object.entries(db.workouts).some(([k,v])=>k.startsWith(dt)&&v.done);h+=`<div class="day ${done?'done':''}">${d}${done?'<span class="dot"></span>':''}</div>`}cal.innerHTML=h}function month(d){calDate=new Date(calDate.getFullYear(),calDate.getMonth()+d,1);renderCal()}renderCal();
 function historyEntries(){return Object.entries(db.workouts).filter(([k,v])=>v&&v.done).map(([k,v])=>{let parts=k.split('-'),gymIdx=+parts.pop(),date=parts.join('-');return{date,gymIdx,v}}).sort((a,b)=>b.date.localeCompare(a.date))}
@@ -1080,6 +1740,30 @@ renderHistory();
 initStrengthProgress();
 shop.innerHTML=Object.entries(list).map(([cat,items])=>`<div class="card shop"><h3>${cat}</h3>${items.map(i=>`<label><input type="checkbox" ${db.shopping[i]?'checked':''} onchange="db.shopping['${i}']=this.checked;save()"><span>${i}</span></label>`).join('')}</div>`).join('');
 photoDate.value=new Date().toISOString().slice(0,10);photoInputs.innerHTML=['Frente','Perfil','Espalda'].map((x,i)=>`<div class="photo"><div><b>${x}</b><input id="ph${i}" type="file" accept="image/*" style="margin-top:9px"></div></div>`).join('');function dataURL(f){return new Promise(res=>{if(!f)return res(null);let r=new FileReader();r.onload=()=>res(r.result);r.readAsDataURL(f)})}async function savePhotos(){let imgs=await Promise.all([0,1,2].map(i=>dataURL(document.getElementById('ph'+i).files[0])));if(!imgs.some(Boolean))return alert('Selecciona al menos una foto');db.photos.push({id:Date.now(),date:photoDate.value,imgs});save();renderPhotos()}function renderPhotos(){photoHistory.innerHTML=db.photos.slice().reverse().map(p=>`<div class="card"><div class="actions" style="justify-content:space-between"><h3>${p.date}</h3><button class="btn danger" onclick="db.photos=db.photos.filter(x=>x.id!==${p.id});save();renderPhotos()">Eliminar</button></div><div class="photos">${p.imgs.map(x=>`<div class="photo">${x?`<img src="${x}">`:'Sin foto'}</div>`).join('')}</div></div>`).join('')||'<div class="card">Sin fotos guardadas</div>'}renderPhotos();
+
+function restoreLastLocation(){
+  const requested=uiState.page&&document.getElementById(uiState.page)?uiState.page:'home';
+  showPage(requested,true);
+}
+setTimeout(restoreLastLocation,60);
+
 function exportAll(){let b=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='mi_transformacion_respaldo.json';a.click()}importFile.onchange=e=>{let f=e.target.files[0],r=new FileReader();r.onload=()=>{try{db=JSON.parse(r.result);save();location.reload()}catch{alert('Archivo inválido')}};r.readAsText(f)};function clearAll(){if(confirm('¿Borrar todos los datos?')){localStorage.clear();location.reload()}}
 </script>
+
+<div class="exercise-modal" id="exerciseModal" aria-hidden="true">
+  <div class="exercise-modal-backdrop" onclick="closeExerciseDemo()"></div>
+  <div class="exercise-modal-panel" role="dialog" aria-modal="true">
+    <div class="exercise-modal-top">
+      <div><span class="badge">TÉCNICA DEL EJERCICIO</span><h2 id="demoExerciseTitle">Ejercicio</h2><div class="muted" style="margin-top:4px">Video real + ejecución + tus cargas</div></div>
+      <button class="exercise-modal-close" onclick="closeExerciseDemo()" aria-label="Cerrar">×</button>
+    </div>
+    <div class="exercise-modal-content">
+      <div class="demo-stage" id="demoStage">
+        <div class="demo-caption"><i></i> Video y guía técnica integrados</div>
+      </div>
+      <aside class="tech-panel" id="demoTechPanel"></aside>
+    </div>
+  </div>
+</div>
+
 </body></html>
