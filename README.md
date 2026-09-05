@@ -1,13 +1,18 @@
-# Mi Transformación — GitHub Pages V2 SINGLE
+# Mi Transformación Pro V4 — Nutrición Pro
 
-Versión de prueba robusta para GitHub Pages.
+Versión estática para visualizar antes de subir a GitHub Pages.
 
-## Publicar
-1. Reemplazá el `index.html` del repositorio por este.
-2. Subí también `.nojekyll`.
-3. Settings → Pages → Deploy from a branch → main / root.
-4. Esperá 1–3 minutos.
-5. Hacé una recarga fuerte: Ctrl+F5 en Windows.
+Novedades:
+- Dashboard nutricional integrado en Inicio.
+- Calorías, proteína, carbohidratos y grasas estimadas.
+- Cambiar cualquiera de las 4 comidas sin destruir el plan original.
+- Constructor de comidas por bloques.
+- Papa preseleccionada como carbohidrato principal.
+- Opciones rápidas para hambre, pre-entreno y post-entreno.
+- Registro de macros aproximados de las comidas consumidas.
+- Historial nutricional.
+- Objetivos editables de proteína, carbohidratos, grasas, calorías y agua.
+- Mantiene biblioteca de ejercicios, rutinas personalizadas, progreso, fotos y cargas.
 
-Todo el CSS, JavaScript, rutina y nutrición está dentro de `index.html`.
-No requiere npm, React, Vite ni Netlify.
+Publicación:
+Subir index.html y .nojekyll a la raíz del repositorio con GitHub Pages main/root.
